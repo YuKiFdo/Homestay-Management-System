@@ -2,7 +2,7 @@
 
     return [
         //
-        'dog-menu-title' => 'Dogs',
+        'dog-menu-title' => 'Dog Section',
         'dog-add' => 'Add Dog',
         'dog-list' => 'View Dogs',
 
