@@ -22,7 +22,7 @@
         <div class="col-lg-12">
             <div class="card card-Vertical card-default card-md mb-4">
                 <div class="card-header">
-                    <h6>Register New Dog </h6>
+                    <h6>Register New Customer </h6>
                 </div>
                 <div class="card-body py-md-30">
                     <form>
