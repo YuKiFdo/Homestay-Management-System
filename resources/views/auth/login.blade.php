@@ -26,7 +26,7 @@
                             <div class="card border-0">
                                 <div class="card-header">
                                     <div class="edit-profile__title">
-                                        <h6>Sign in HexaDash</h6>
+                                        <h6>Sign in Homestay Management</h6>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -66,43 +66,6 @@
                                             </div>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="px-20">
-                                    <p class="social-connector social-connector__admin text-center">
-                                        <span>Or</span>
-                                    </p>
-                                    <div class="button-group d-flex align-items-center justify-content-center">
-                                        <ul class="admin-socialBtn">
-                                            <li>
-                                                <button class="btn text-dark google">
-                                                    <img class="svg" src="{{ asset('assets/img/google-Icon.svg') }}" alt="img" />
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class=" radius-md wh-48 content-center facebook">
-                                                    <i class="uil uil-facebook-f"></i>
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="radius-md wh-48 content-center twitter">
-                                                    <i class="uil uil-twitter"></i>
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="radius-md wh-48 content-center github">
-                                                    <i class="uil uil-github"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="admin-topbar">
-                                    <p class="mb-0">
-                                        Don't have an account?
-                                        <a href="{{ route('register') }}" class="color-primary">
-                                            Sign up
-                                        </a>
-                                    </p>
                                 </div>
                             </div>
                         </div>
