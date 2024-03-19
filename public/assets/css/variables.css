@@ -24,7 +24,7 @@
     --color-footer-divider:#353b58;
     --color-footer-title:var(--color-white);
     --color-footer-link-hover:var(--color-white);
-    --color-primary:#8231D3;
+    --color-primary:#38cc60;
     --color-secondary:#5840FF;
     --color-success:#01B81A;
     --color-info:#00AAFF;
@@ -42,7 +42,7 @@
     --bg-warning:#FA8B0C;
     --bg-danger:#FF0F0F;
     --bg-dark:#0A0A0A;
-    --bg-primary-hover:#6726A8;
+    --bg-primary-hover:#4ea231;
     --bg-secondary-hover:#3520C8;
     --bg-success-hover:#0D811D;
     --bg-info-hover:#0787C7;
