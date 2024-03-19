@@ -1,6 +1,9 @@
 <?php
 
     return [
+        // Admin Area
+        'application-menu-title' => 'Application',
+        'application-config' => 'Configuration',
         //
         'dog-menu-title' => 'Dog Section',
         'dog-add' => 'Add Dog',
