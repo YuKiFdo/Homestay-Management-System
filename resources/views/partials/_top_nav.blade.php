@@ -2,13 +2,13 @@
     <div class="navbar-left">
         <div class="logo-area">
             <a class="navbar-brand" href="{{ route('dashboard.demo_one',app()->getLocale()) }}">
-                <img class="dark" src="{{ asset('assets/img/logo-dark.svg') }}" alt="svg">
-                <img class="light" src="{{ asset('assets/img/logo-white.svg') }}" alt="img">
+                {{-- Class = Dark --}}
+                <img src="{{ asset('storage/' . config('application.logo')) }}" alt="img">
             </a>
             <a href="#" class="sidebar-toggle">
                 <img class="svg" src="{{ asset('assets/img/svg/align-center-alt.svg') }}" alt="img"></a>
         </div>
-        
+
         <div class="top-menu">
             <div class="hexadash-top-menu position-relative">
                 <ul>
