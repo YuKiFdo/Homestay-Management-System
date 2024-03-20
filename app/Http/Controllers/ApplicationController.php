@@ -51,8 +51,8 @@ class ApplicationController extends Controller
 
     public function viewConfig()
     {
-        $title = "Create new Dog";
-        $description = "Some description for the page";
+        $title = "Application Configuration";
+        $description = "Change Application settings";
         return view('admin.application.config', compact('title', 'description'));
     }
 
