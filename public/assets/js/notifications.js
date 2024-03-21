@@ -19,7 +19,7 @@ function showMsg(messageData) {
     let message = messageData.text;
     let type = messageData.type;
     let icon = messageData.icon;
-    let duration = 3500;
+    let duration = 3400;
     createmsg(message, type, icon)
     let e = messageCounts - 1;
     var a, n;
