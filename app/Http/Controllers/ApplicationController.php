@@ -12,7 +12,7 @@ class ApplicationController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'application_name' => 'required|string|max:5',
+            'application_name' => 'required|string|max:20',
             'application_logo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
