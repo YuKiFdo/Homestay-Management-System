@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number" class="il-gray fs-14 fw-500 align-center mb-10">Phone Number <span
+                                    <label for="phone_number">Phone Number <span
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-mobile"></span>
@@ -60,11 +60,8 @@
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="nav-icon uil uil-envelope"></span>
-                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="validationDefault01" placeholder="" required>
+                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="InputEmailIcon" placeholder="">
                                     </div>
-                                     <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="dob">Date Of Birth</label>
