@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-main">
-                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.dog-add') }}</h4>
+                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.customers-add') }}</h4>
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Dog</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.dog-add') }}</li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Customer</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.customers-add') }}</li>
                             </ol>
                         </nav>
                     </div>
