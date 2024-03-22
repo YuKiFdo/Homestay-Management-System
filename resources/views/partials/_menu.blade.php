@@ -16,6 +16,19 @@
             </ul>
         </li>
 
+        {{-- Room Area --}}
+        <li class="has-child {{ Request::is(app()->getLocale().'/room/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/room/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-home"></span>
+                <span class="menu-text">{{ trans('menu.room-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+                <li><a class="{{ Request::is(app()->getLocale().'/room/room') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/room/rmview') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-rmview') }}</a></li>
+            </ul>
+        </li>
+
         {{-- Admin Area --}}
         <li class="menu-title mt-30">
             <span>Administration</span>
