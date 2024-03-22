@@ -1,5 +1,20 @@
 <div class="sidebar__menu-group">
     <ul class="sidebar_nav">
+        {{-- Customer Area --}}
+        <li class="menu-title mt-30">
+            <span>Application</span>
+        </li>
+        <li class="has-child {{ Request::is(app()->getLocale().'/customers/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/customers/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-user-circle"></span>
+                <span class="menu-text">{{ trans('menu.customers-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+                <li><a class="{{ Request::is(app()->getLocale().'/customers/register') ? 'active':'' }}" href="{{ route('customer.view',app()->getLocale()) }}">{{ trans('menu.customers-add') }}</a></li>
+            </ul>
+        </li>
+
         {{-- Admin Area --}}
         <li class="menu-title mt-30">
             <span>Administration</span>
