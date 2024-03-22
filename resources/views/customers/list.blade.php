@@ -44,28 +44,28 @@
                                                     <div class="custom-checkbox  check-all">
                                                         <input class="checkbox" type="checkbox" id="check-45">
                                                         <label for="check-45">
-                                                            <span class="checkbox-text userDatatable-title">Customer</span>
+                                                            <span class="checkbox-text userDatatable-title">Customer Name</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Emaill</span>
+                                                <span class="userDatatable-title">ID / Passport</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Phone</span>
+                                                <span class="userDatatable-title">Phone Number</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Profession</span>
+                                                <span class="userDatatable-title">Email</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Gender</span>
+                                                <span class="userDatatable-title">Country</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Status</span>
+                                                <span class="userDatatable-title">Date Of Birth</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title float-end">Actions</span>
+                                                <span class="userDatatable-title float-end">Anniversary</span>
                                             </th>
                                         </tr>
                                     </thead>
@@ -95,7 +95,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url('{{ $has_profile_picture ? Helper::get_public_storage_asset_url( $customer->profile_picture ) : asset( 'assets/img/svg/user.svg' ) }}'); background-size: cover;"></a>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
                                                                 <a href="#" class="text-dark fw-500">
@@ -109,7 +108,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->email }}
+                                                            {{ $customer->id }}
                                                         </div>
                                                     </td>
                                                     <td>
@@ -119,7 +118,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->profession }}
+                                                            {{ $customer->email }}
                                                         </div>
                                                     </td>
                                                     <td>
