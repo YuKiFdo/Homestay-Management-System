@@ -1,4 +1,4 @@
 <?php return array (
-  'name' => 'Shehal',
+  'name' => 'HMSS',
   'logo' => 'assets/img/admin/application/logo.png',
 );

@@ -52,7 +52,7 @@
                                         <span class="fas fa-mobile"></span>
                                         <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputPhoneIcon" placeholder="">
-                                           
+
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -109,7 +109,7 @@
 
                                 <div class="col-md-6">
                                 </div>
-                                
+
                                 <div class="col-md-6 mb-25">
                                     <div class="layout-button mt-0 d-flex justify-content-end">
                                         <!-- Changed class to 'd-flex justify-content-end' -->
