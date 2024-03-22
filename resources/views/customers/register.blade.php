@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-main">
-                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.customers-add') }}</h4>
+                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.dog-add') }}</h4>
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Add Customer</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.customers-add') }}</li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Dog</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.dog-add') }}</li>
                             </ol>
                         </nav>
                     </div>
@@ -25,57 +25,73 @@
                         <h6>Register New Customer </h6>
                     </div>
                     <div class="card-body py-md-30">
-                        <form class="was-validated">
+                        <form>
                             <div class="row">
                                 <div class="col-md-6 mb-25">
+                                    <label for="customer_name">Customer Name <span
+                                    class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="la-user lar color-gray"></span>
-                                        <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer01" placeholder="Customer Name" required>
+                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                            id="inputNameIcon" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="id_or_passport">ID / Passport<span
+                                        class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-id-card"></span>
-                                        <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer02" placeholder="ID / Passport Number" required>
+                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                            id="inputIdIcon" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
+                                    <label for="phone_number" class="il-gray fs-14 fw-500 align-center mb-10">Phone Number <span
+                                        class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-mobile"></span>
-                                        <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer03" placeholder="Phone Number" required>
-                                    </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
+                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                            id="inputPhoneIcon" placeholder="">
+                                           
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="email">Email<span
+                                        class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="nav-icon uil uil-envelope"></span>
-                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="validationDefault04" placeholder="Email" required>
+                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="validationDefault01" placeholder="" required>
                                     </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
+                                     <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
+                                    <label for="country">Country<span
+                                        class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-globe"></span>
-                                        <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer05" placeholder="Country" required>
+                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                            id="inputCountryIcon" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="dob">Date Of Birth</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
-                                            <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer06" placeholder="Date Of Birth" required>
+                                            <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                                id="datepicker8" placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
+                                    <label for="anniversary">Anniversary</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
-                                            <input type="text" class="form-control is-invalid ih-medium ip-light radius-xs b-light" id="validationServer05" placeholder="Anniversary" required>
+                                            <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                                id="datepicker" placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
                                         </div>
