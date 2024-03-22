@@ -66,15 +66,6 @@
                                                 Looks good!
                                             </div>
                                 </div>
-                                <div class="col-md-6 mb-25">
-                                    <label for="country">Country<span
-                                        class="text-danger">*</span></label>
-                                    <div class="with-icon">
-                                        <span class="fas fa-globe"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                            id="inputCountryIcon" placeholder="">
-                                    </div>
-                                </div>
                                 <div class="col-md-6">
                                     <label for="dob">Date Of Birth</label>
                                     <div class="form-group form-group-calender mb-20">
@@ -94,6 +85,25 @@
                                                 id="datepicker" placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-default col-md-6 mb-25">
+                                    <div class="card-header py-20">
+                                        <label for="country">Country<span
+                                            class="text-danger">*</span></label>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="dropdown  dropdown-hover">
+                                            <a class="btn-link" href="">
+                                                Click me
+                                                <img src="{{ asset('assets/img/svg/chevron-down.svg') }}" alt="chevron-down" class="svg">
+                                            </a>
+                                            <div class="dropdown-default">
+                                                <a class="dropdown-item" href="#">London</a>
+                                                <a class="dropdown-item" href="#">Dubai</a>
+                                                <a class="dropdown-item" href="#">Sri Lanka</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
