@@ -12,6 +12,7 @@
             </a>
             <ul>
                 <li><a class="{{ Request::is(app()->getLocale().'/customers/register') ? 'active':'' }}" href="{{ route('customer.view',app()->getLocale()) }}">{{ trans('menu.customers-add') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/customers/list') ? 'active':'' }}" href="{{ route('customer.list',app()->getLocale()) }}">{{ trans('menu.customers-list') }}</a></li>
             </ul>
         </li>
 

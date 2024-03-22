@@ -12,6 +12,7 @@
         'customers-menu-title' => 'Customer',
         'customers-add' => 'Register Customer',
         'customers-list' => 'View Customer',
+        
 
 
 
