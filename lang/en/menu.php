@@ -8,10 +8,14 @@
         'dog-menu-title' => 'Dog Section',
         'dog-add' => 'Add Dog',
         'dog-list' => 'View Dogs',
-        //
+        //Customer Area
         'customers-menu-title' => 'Customer',
         'customers-add' => 'Register Customer',
         'customers-list' => 'View Customer',
+        //Room Area
+        'room-menu-title' => 'Room',
+        'room-add' => 'Add Room',
+        'room-rwview' => 'View Room',
         
 
 
