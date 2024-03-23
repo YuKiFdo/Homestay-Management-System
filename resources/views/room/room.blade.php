@@ -38,7 +38,8 @@
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1" >Room Type</label>
+                                        <label for="exampleFormControlSelect1">Room Type<span
+                                            class="text-danger">*</span></label></label>
                                         <select class="form-control px-15" id="exampleFormControlSelect1">
                                             <option>Ac</option>
                                             <option>Non Ac</option>
@@ -47,7 +48,8 @@
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1" class="il-gray fs-14 fw-500 align-center mb-10">Bed Type</label>
+                                        <label for="exampleFormControlSelect1">Bed Type<span
+                                            class="text-danger">*</span></label></label>
                                         <select class="form-control px-15" id="exampleFormControlSelect1">
                                             <option>1</option>
                                             <option>2</option>
