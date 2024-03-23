@@ -89,7 +89,7 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->namespace($this->namespace)
-                ->group(base_path('routes/room/view.php'));
+                ->group(base_path('routes/room/list.php'));
         });
     }
 

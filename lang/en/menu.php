@@ -15,7 +15,7 @@
         //Room Area
         'room-menu-title' => 'Room',
         'room-add' => 'Add Room',
-        'room-rwview' => 'View Room',
+        'room-list' => 'View Room',
         
 
 

@@ -24,8 +24,8 @@
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/room/room') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
-                <li><a class="{{ Request::is(app()->getLocale().'/room/rmview') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-rmview') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/room/view') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/room/list') ? 'active':'' }}" href="{{ route('room.list',app()->getLocale()) }}">{{ trans('menu.room-list') }}</a></li>-->
             </ul>
         </li>
 
