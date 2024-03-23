@@ -78,16 +78,17 @@
                                     <label for="anniversary">Anniversary</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
+                                            <a href="#"><img class="svg"
+                                                src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
                                             <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
                                                 id="datepicker" placeholder="">
-                                            <a href="#"><img class="svg"
-                                                    src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Country<span
+                                        <label for="country">Country<span
                                             class="text-danger">*</span></label></label>
                                         <select class="form-control px-15" id="exampleFormControlSelect1">
                                             <option>Select A Country</option>
