@@ -296,20 +296,6 @@
             </ul>
         </li>
         <li class="menu-title mt-30">
-            <span>CRUD</span>
-        </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/customer/*') ? 'open':'' }}">
-            <a href="#" class="{{ Request::is(app()->getLocale().'/customer/*') ? 'active':'' }}">
-                <span class="nav-icon uil uil-database"></span>
-                <span class="menu-text">{{ trans('menu.customer-crud-menu-title') }}</span>
-                <span class="toggle-icon"></span>
-            </a>
-            <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/customer/list') ? 'active':'' }}" href="{{ route('customer.list',app()->getLocale()) }}">{{ trans('menu.customer-view-all') }}</a></li>
-                <li><a class="{{ Request::is(app()->getLocale().'/customer/create') ? 'active':'' }}" href="{{ route('customer.create',app()->getLocale()) }}">{{ trans('menu.customer-add-new') }}</a></li>
-            </ul>
-        </li>
-        <li class="menu-title mt-30">
             <span>Features</span>
         </li>
         <li class="has-child {{ Request::is(app()->getLocale().'/ui/*') ? 'open':'' }}">

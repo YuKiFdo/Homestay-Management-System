@@ -227,21 +227,6 @@
                         </ul>
                     </li>
                     <li class="has-subMenu">
-                        <a href="#" class="{{ Request::is(app()->getLocale().'/customer/*') ? 'active':'' }}">Crud</a>
-                        <ul class="subMenu">
-                            <li class="has-subMenu-left">
-                                <a href="#" class="{{ Request::is(app()->getLocale().'/customer/*') ? 'active':'' }}">
-                                    <span class="nav-icon uil uil-database"></span>
-                                    <span class="menu-text">{{ trans('menu.customer-crud-menu-title') }}</span>
-                                </a>
-                                <ul class="subMenu">
-                                    <li><a class="{{ Request::is(app()->getLocale().'/customer/list') ? 'active':'' }}" href="{{ route('customer.list',app()->getLocale()) }}">{{ trans('menu.customer-view-all') }}</a></li>
-                                    <li><a class="{{ Request::is(app()->getLocale().'/customer/create') ? 'active':'' }}" href="{{ route('customer.create',app()->getLocale()) }}">{{ trans('menu.customer-add-new') }}</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-subMenu">
                         <a href="#" class="{{ Request::is(app()->getLocale().'/wizard/*') || Request::is(app()->getLocale().'/widget/*') || Request::is(app()->getLocale().'/map/*') || Request::is(app()->getLocale().'/form/*') || Request::is(app()->getLocale().'/chart/*') || Request::is(app()->getLocale().'/editor') || Request::is(app()->getLocale().'/icon/*') ? 'active':'' }}">Features</a>
                         <ul class="subMenu">
                             <li>
