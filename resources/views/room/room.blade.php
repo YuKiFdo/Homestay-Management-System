@@ -28,7 +28,7 @@
                         <form>
                             <div class="row">
                                 <div class="col-md-6 mb-25">
-                                    <label for="customer_name">Room Name <span
+                                    <label for="room_name">Room Name <span
                                     class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class=""></span>
@@ -36,27 +36,29 @@
                                             id="inputNameIcon" placeholder="">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="id_or_passport">Room Type<span
-                                        class="text-danger">*</span></label>
-                                    <div class="with-icon">
-                                        <span class=""></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                            id="inputIdIcon" placeholder="">
+                                <div class="col-md-6 mb-25">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1" >Room Type</label>
+                                        <select class="form-control px-15" id="exampleFormControlSelect1">
+                                            <option>Ac</option>
+                                            <option>Non Ac</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number">Bed Type <span
-                                        class="text-danger">*</span></label>
-                                    <div class="with-icon">
-                                        <span class=""></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                            id="inputPhoneIcon" placeholder="">
-
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1" class="il-gray fs-14 fw-500 align-center mb-10">Bed Type</label>
+                                        <select class="form-control px-15" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="email">Kid Price<span
+                                <div class="col-md-6 mb-25">
+                                    <label for="kid_price">Kid Price<span
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class=""></span>
@@ -64,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number">Adult Price<span
+                                    <label for="adult_price">Adult Price<span
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class=""></span>
@@ -78,6 +80,9 @@
 
                                 <div class="col-md-6">
                                 </div>
+
+                                <!--<div class="col-md-6">
+                                </div>-->
 
                                 <div class="col-md-6 mb-25">
                                     <div class="layout-button mt-0 d-flex justify-content-end">
