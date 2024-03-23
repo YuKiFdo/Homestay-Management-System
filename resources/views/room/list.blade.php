@@ -13,6 +13,11 @@
                                 </h4>
                                 <span class="sub-title ms-sm-25 ps-sm-25"></span>
                             </div>
+                            <div class="action-btn mt-sm-0 mt-15">
+                                <a href="{{ route('customer.create', app()->getLocale()) }}" class="btn px-20 btn-primary ">
+                                    <i class="las la-plus fs-16"></i>Add New
+                                </a>
+                            </div>
                         </div>
                         <div class="breadcrumb-main__wrapper">
 
@@ -44,28 +49,28 @@
                                                     <div class="custom-checkbox  check-all">
                                                         <input class="checkbox" type="checkbox" id="check-45">
                                                         <label for="check-45">
-                                                            <span class="checkbox-text userDatatable-title">Customer Name</span>
+                                                            <span class="checkbox-text userDatatable-title">Customer</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">ID / Passport</span>
+                                                <span class="userDatatable-title">Emaill</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Phone Number</span>
+                                                <span class="userDatatable-title">Phone</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Email</span>
+                                                <span class="userDatatable-title">Profession</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Country</span>
+                                                <span class="userDatatable-title">Gender</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Date Of Birth</span>
+                                                <span class="userDatatable-title">Status</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title float-end">Anniversary</span>
+                                                <span class="userDatatable-title float-end">Actions</span>
                                             </th>
                                         </tr>
                                     </thead>
@@ -95,6 +100,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url('{{ $has_profile_picture ? Helper::get_public_storage_asset_url( $customer->profile_picture ) : asset( 'assets/img/svg/user.svg' ) }}'); background-size: cover;"></a>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
                                                                 <a href="#" class="text-dark fw-500">
@@ -108,7 +114,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->id }}
+                                                            {{ $customer->email }}
                                                         </div>
                                                     </td>
                                                     <td>
@@ -118,7 +124,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->email }}
+                                                            {{ $customer->profession }}
                                                         </div>
                                                     </td>
                                                     <td>
