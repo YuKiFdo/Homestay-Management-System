@@ -31,7 +31,7 @@
                                     <label for="room_name">Room Name <span
                                     class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class=""></span>
+                                        <span class="fas fa-house-user"></span>
                                         <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputNameIcon" placeholder="">
                                     </div>
@@ -63,7 +63,7 @@
                                     <label for="kid_price">Kid Price<span
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class=""></span>
+                                        <span class="fas fa-child"></span>
                                         <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="InputEmailIcon" placeholder="">
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                     <label for="adult_price">Adult Price<span
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class=""></span>
+                                        <span class="fas fa-user"></span>
                                         <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputPhoneIcon" placeholder="">
 
