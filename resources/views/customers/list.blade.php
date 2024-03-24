@@ -9,14 +9,9 @@
                     <div class="breadcrumb-main add-contact justify-content-sm-between ">
                         <div class=" d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
                             <div class="d-flex align-items-center add-contact__title justify-content-center me-sm-25">
-                                <h4 class="text-capitalize fw-500 breadcrumb-title">{{ trans('menu.customer-view-all') }}
+                                <h4 class="text-capitalize fw-500 breadcrumb-title">{{ trans('menu.customers-list') }}
                                 </h4>
                                 <span class="sub-title ms-sm-25 ps-sm-25"></span>
-                            </div>
-                            <div class="action-btn mt-sm-0 mt-15">
-                                <a href="{{ route('customer.list', app()->getLocale()) }}" class="btn px-20 btn-primary ">
-                                    <i class="las la-plus fs-16"></i>Add New
-                                </a>
                             </div>
                         </div>
                         <div class="breadcrumb-main__wrapper">
@@ -37,7 +32,9 @@
                 <div class="card">
                     <div class="card-header color-dark fw-500">
                         Customer List
+                        <button type="button" class="order-bg-opacity-secondary text-secondary btn radius-md">Export</button>
                     </div>
+                    
                     <div class="card-body">
                         <div class="userDatatable global-shadow border-light-0 w-100">
                             <div class="table-responsive">
@@ -49,37 +46,40 @@
                                                     <div class="custom-checkbox  check-all">
                                                         <input class="checkbox" type="checkbox" id="check-45">
                                                         <label for="check-45">
-                                                            <span class="checkbox-text userDatatable-title">Customer</span>
+                                                            <span class="checkbox-text userDatatable-title">Customer ID</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Emaill</span>
+                                                <span class="userDatatable-title">ID/Passport</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Phone</span>
+                                                <span class="userDatatable-title">Customer Name</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Profession</span>
+                                                <span class="userDatatable-title">Telephone</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Gender</span>
+                                                <span class="userDatatable-title">Email</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Status</span>
+                                                <span class="userDatatable-title">Country</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">DOB</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title float-end">Anniversary</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title float-end">Actions</span>
                                             </th>
-                                        </tr>
+                                        </tr>    
                                     </thead>
                                     <tbody>
                                         @if (count($customers) == 0)
                                             <tr>
-                                                <td colspan="7">
-                                                    <p class="text-center">No Customer Found !</p>
-                                                </td>
                                             </tr>
                                         @else
                                             @foreach ($customers as $customer)

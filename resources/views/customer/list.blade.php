@@ -17,7 +17,7 @@
                                 <a href="{{ route('customer.create', app()->getLocale()) }}" class="btn px-20 btn-primary ">
                                     <i class="las la-plus fs-16"></i>Add New
                                 </a>
-                            </div>
+                            </div> 
                         </div>
                         <div class="breadcrumb-main__wrapper">
 
