@@ -20,7 +20,6 @@
                             </div> 
                         </div>
                         <div class="breadcrumb-main__wrapper">
-
                             <form action="/" class="d-flex align-items-center add-contact__form my-sm-0 my-2">
                                 <img src="{{ asset('assets/img/svg/search.svg') }}" alt="search" class="svg">
                                 <input class="form-control me-sm-2 border-0 box-shadow-none" type="search"
