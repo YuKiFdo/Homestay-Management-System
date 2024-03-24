@@ -38,9 +38,9 @@
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Room Type<span
+                                        <label for="room_type">Room Type<span
                                             class="text-danger">*</span></label></label>
-                                        <select class="form-control px-15" id="exampleFormControlSelect1">
+                                        <select class="form-control px-20" id="exampleFormControlSelect1">
                                             <option>Ac</option>
                                             <option>Non Ac</option>
                                         </select>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Bed Type<span
+                                        <label for="bed_type">Bed Type<span
                                             class="text-danger">*</span></label></label>
                                         <select class="form-control px-15" id="exampleFormControlSelect1">
                                             <option>1</option>
