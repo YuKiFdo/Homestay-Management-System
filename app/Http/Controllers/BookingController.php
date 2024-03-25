@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Book;
+use App\Models\Booking;
 
 use Illuminate\Http\Request;
 
@@ -27,10 +27,10 @@ class BookingController extends Controller
         $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
         $offset   = ( $page * $per_page ) - $per_page;
 
-        $booking   = Book::orderBy('id', 'DESC')->paginate( $per_page );
+        $booking   = Booking::orderBy('id', 'DESC')->paginate( $per_page );
         $title = "Booking A Room";
         $description = "Some description for the page";
-        return view('booking.list', compact('title', 'description', 'rooms'));
+        return view('booking.list', compact('title', 'description', 'booking'));
     }
 
     /**
@@ -98,7 +98,7 @@ class BookingController extends Controller
 
     public function delete($language, $id)
      {
-         $find_booking = Book::findOrFail($id);
+         $find_booking = Booking::findOrFail($id);
          $find_booking->delete();
          return redirect()->route('booking.list', app()->getLocale())->with('delete', 'Booking deleted successfully !');
      }
