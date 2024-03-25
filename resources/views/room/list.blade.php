@@ -90,13 +90,13 @@
                                                                 </div>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
-                                                                <a href="#" class="text-dark fw-500">
-                                                                    <h6>{{ $room->name }}</h6>
-                                                                </a>
-                                                                <p class="d-block mb-0">
-                                                                    {{ $room->type }}
-                                                                </p>
+                                                                {{ $room->name}}
                                                             </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $room->type }}
                                                         </div>
                                                     </td>
                                                     <td>
