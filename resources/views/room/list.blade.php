@@ -31,7 +31,7 @@
             <div class="col-lg-12 mb-30">
                 <div class="card">
                     <div class="card-header color-dark fw-500">
-                        Customer List
+                        Room List
                         <button type="button" class="order-bg-opacity-secondary text-secondary btn radius-md">Export</button>
                     </div>
 
@@ -46,31 +46,22 @@
                                                     <div class="custom-checkbox  check-all">
                                                         <input class="checkbox" type="checkbox" id="check-45">
                                                         <label for="check-45">
-                                                            <span class="checkbox-text userDatatable-title">Customer ID</span>
+                                                            <span class="checkbox-text userDatatable-title">Room Name</span>
                                                         </label>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">ID/Passport</span>
+                                                <span class="userDatatable-title">Room Type</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Customer Name</span>
+                                                <span class="userDatatable-title">Bed Type</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Telephone</span>
+                                                <span class="userDatatable-title">Kid Price</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Email</span>
-                                            </th>
-                                            <th>
-                                                <span class="userDatatable-title">Country</span>
-                                            </th>
-                                            <th>
-                                                <span class="userDatatable-title">DOB</span>
-                                            </th>
-                                            <th>
-                                                <span class="userDatatable-title float-end">Anniversary</span>
+                                                <span class="userDatatable-title">Adult Price</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title float-end">Actions</span>
@@ -97,50 +88,44 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url('{{ $has_profile_picture ? Helper::get_public_storage_asset_url( $customer->profile_picture ) : asset( 'assets/img/svg/user.svg' ) }}'); background-size: cover;"></a>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
                                                                 <a href="#" class="text-dark fw-500">
-                                                                    <h6>{{ $customer->name }}</h6>
+                                                                    <h6>{{ $room->name }}</h6>
                                                                 </a>
                                                                 <p class="d-block mb-0">
-                                                                    {{ $customer->address == null ? '' : $customer->address }}
+                                                                    {{ $room->type }}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->email }}
+                                                            {{ $room->bedtype }}
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->phone }}
+                                                            {{ $room->kidprice }}
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->profession }}
+                                                            {{ $room->adultprice }}
                                                         </div>
                                                     </td>
-                                                    <td>
-                                                        <div class="userDatatable-content">
-                                                            {{ $customer->gender == 'male' ? 'Male' : 'Female' }}
-                                                        </div>
-                                                    </td>
-                                                    <td>
+                                                    {{--<td>
                                                         <div class="userDatatable-content d-inline-block">
-                                                            <span
-                                                                class="bg-opacity-{{ get_status_class( $customer->status ) }}  color-{{ get_status_class( $customer->status ) }} rounded-pill userDatatable-content-status active">
-                                                                {{ get_status_label( $customer->status ) }}
-                                                            </span>
+                                                             <span
+                                                                class="bg-opacity-{{ get_status_class( $room->status ) }}  color-{{ get_status_class( $room->status ) }} rounded-pill userDatatable-content-status active">
+                                                                {{ get_status_label( $room->status ) }}
+                                                            </span> 
                                                         </div>
-                                                    </td>
+                                                    </td>--}}
                                                     <td>
                                                         <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
                                                             <li>
-                                                                <a href="{{ route('customer.edit', [app()->getLocale(), $customer->id]) }}"
+                                                                <a href="{{ route('room.edit', [app()->getLocale(), $room->id]) }}"
                                                                     class="edit">
                                                                     <i class="uil uil-edit"></i>
                                                                 </a>
@@ -152,15 +137,15 @@
                                                                     onclick="
                                                                         event.preventDefault();
                                                                         if ( confirm('Are you sure you want to delete ?') ) {
-                                                                            document.getElementById( 'delete-{{ $customer->id }}' ).submit();
+                                                                            document.getElementById( 'delete-{{ $room->id }}' ).submit();
                                                                         }
                                                                     "
                                                                 >
                                                                     <i class="uil uil-trash-alt"></i>
                                                                 </a>
 
-                                                                <form style="display:none;" id="delete-{{ $customer->id }}"
-                                                                    action="{{ route('customer.delete', [app()->getLocale(), $customer->id]) }}"
+                                                                <form style="display:none;" id="delete-{{ $room->id }}"
+                                                                    action="{{ route('room.delete', [app()->getLocale(), $room->id]) }}"
                                                                     method="POST">
                                                                     @csrf
                                                                     @method('post')
@@ -177,15 +162,15 @@
                         </div>
 
                         <div class="pagination-container d-flex justify-content-end pt-25">
-                            {{ $customers->links( 'pagination::bootstrap-5' ) }}
+                            {{ $room->links( 'pagination::bootstrap-5' ) }}
 
                             <ul class="dm-pagination d-flex">
                                 <li class="dm-pagination__item">
                                     <div class="paging-option">
                                         <select name="page-number" class="page-selection" onchange="updatePagination( event )">
-                                            <option value="20" {{ 20 == $customers->perPage() ? 'selected' : '' }}>20/page</option>
-                                            <option value="40" {{ 40 == $customers->perPage() ? 'selected' : '' }}>40/page</option>
-                                            <option value="60" {{ 60 == $customers->perPage() ? 'selected' : '' }}>60/page</option>
+                                            <option value="20" {{ 20 == $room->perPage() ? 'selected' : '' }}>20/page</option>
+                                            <option value="40" {{ 40 == $room->perPage() ? 'selected' : '' }}>40/page</option>
+                                            <option value="60" {{ 60 == $room->perPage() ? 'selected' : '' }}>60/page</option>
                                         </select>
                                         <a href="/pagination-per-page/20" class="d-none per-page-pagination"></a>
                                     </div>
