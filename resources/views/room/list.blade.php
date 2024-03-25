@@ -119,7 +119,7 @@
                                                              <span
                                                                 class="bg-opacity-{{ get_status_class( $room->status ) }}  color-{{ get_status_class( $room->status ) }} rounded-pill userDatatable-content-status active">
                                                                 {{ get_status_label( $room->status ) }}
-                                                            </span> 
+                                                            </span>
                                                         </div>
                                                     </td>--}}
                                                     <td>
@@ -162,15 +162,15 @@
                         </div>
 
                         <div class="pagination-container d-flex justify-content-end pt-25">
-                            {{ $room->links( 'pagination::bootstrap-5' ) }}
+                            {{ $rooms->links( 'pagination::bootstrap-5' ) }}
 
                             <ul class="dm-pagination d-flex">
                                 <li class="dm-pagination__item">
                                     <div class="paging-option">
                                         <select name="page-number" class="page-selection" onchange="updatePagination( event )">
-                                            <option value="20" {{ 20 == $room->perPage() ? 'selected' : '' }}>20/page</option>
-                                            <option value="40" {{ 40 == $room->perPage() ? 'selected' : '' }}>40/page</option>
-                                            <option value="60" {{ 60 == $room->perPage() ? 'selected' : '' }}>60/page</option>
+                                            <option value="20" {{ 20 == $rooms->perPage() ? 'selected' : '' }}>20/page</option>
+                                            <option value="40" {{ 40 == $rooms->perPage() ? 'selected' : '' }}>40/page</option>
+                                            <option value="60" {{ 60 == $rooms->perPage() ? 'selected' : '' }}>60/page</option>
                                         </select>
                                         <a href="/pagination-per-page/20" class="d-none per-page-pagination"></a>
                                     </div>
