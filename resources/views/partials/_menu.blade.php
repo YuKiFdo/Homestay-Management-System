@@ -29,6 +29,19 @@
             </ul>
         </li>
 
+        {{-- Bill Area --}}
+        <li class="has-child {{ Request::is(app()->getLocale().'/bill/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/bill/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-home"></span>
+                <span class="menu-text">{{ trans('menu.bill-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+            {{--<li><a href="{{ route('bill.bill',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}">{{ trans('menu.bill-bill') }}</a></li> --}}
+                <li><a class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}" href="{{ route('bill.bill',app()->getLocale()) }}">{{ trans('menu.bill-invoice') }}</a></li>
+            </ul>
+        </li>
+
         {{-- Admin Area --}}
         <li class="menu-title mt-30">
             <span>Administration</span>
