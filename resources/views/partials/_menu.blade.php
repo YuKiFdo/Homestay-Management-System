@@ -37,8 +37,7 @@
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-            {{--<li><a href="{{ route('bill.bill',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}">{{ trans('menu.bill-bill') }}</a></li> --}}
-                <li><a class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}" href="{{ route('bill.bill',app()->getLocale()) }}">{{ trans('menu.bill-invoice') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}" href="{{ route('bill.view',app()->getLocale()) }}">{{ trans('menu.bill-invoice') }}</a></li>
             </ul>
         </li>
 
