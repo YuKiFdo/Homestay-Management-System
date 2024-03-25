@@ -99,7 +99,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
-                                                                {{ $customer->id }}
+                                                                {{ $customer->cusid}}
                                                             </div>
                                                         </div>
                                                     </td>

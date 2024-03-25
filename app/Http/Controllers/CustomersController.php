@@ -60,6 +60,7 @@ class CustomersController extends Controller
          } else {
              $customer = new Customers();
 
+             $customer->cusid = 'GUEST - ' . str_pad(Customers::count() + 1, 3, '0', STR_PAD_LEFT); // Generating the custom ID
              $customer->name       = $request->name;
              $customer->passport      = $request->passport;
              $customer->telephone      = $request->telephone;
