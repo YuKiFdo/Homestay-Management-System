@@ -16,6 +16,10 @@
         'room-menu-title' => 'Room',
         'room-add' => 'Add Room',
         'room-list' => 'View Room',
+        //Booking Area
+        'booking-menu-title' => 'Booking Rooms',
+        'booking-add' => 'Booking A Room',
+        'booking-list' => 'Booking View',
         //Bill Area
         'bill-menu-title' => 'Bill',
         'bill-invoice' => 'Invoice',

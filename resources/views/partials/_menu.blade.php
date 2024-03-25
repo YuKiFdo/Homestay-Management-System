@@ -29,10 +29,23 @@
             </ul>
         </li>
 
+        {{-- Booking Area --}}
+        <li class="has-child {{ Request::is(app()->getLocale().'/booking/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/booking/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-bookmark"></span>
+                <span class="menu-text">{{ trans('menu.booking-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+                <li><a class="{{ Request::is(app()->getLocale().'/booking/booking') ? 'active':'' }}" href="{{ route('booking.view',app()->getLocale()) }}">{{ trans('menu.booking-add') }}</a></li>
+                <li><a class="{{ Request::is(app()->getLocale().'/booking/list') ? 'active':'' }}" href="{{ route('booking.list',app()->getLocale()) }}">{{ trans('menu.booking-list') }}</a></li>
+            </ul>
+        </li>
+
         {{-- Bill Area --}}
         <li class="has-child {{ Request::is(app()->getLocale().'/bill/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/bill/*') ? 'active':'' }}">
-                <span class="nav-icon uil uil-home"></span>
+                <span class="nav-icon uil uil-receipt"></span>
                 <span class="menu-text">{{ trans('menu.bill-menu-title') }}</span>
                 <span class="toggle-icon"></span>
             </a>
