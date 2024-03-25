@@ -34,7 +34,7 @@
                         Customer List
                         <button type="button" class="order-bg-opacity-secondary text-secondary btn radius-md">Export</button>
                     </div>
-                    
+
                     <div class="card-body">
                         <div class="userDatatable global-shadow border-light-0 w-100">
                             <div class="table-responsive">
@@ -75,17 +75,14 @@
                                             <th>
                                                 <span class="userDatatable-title float-end">Actions</span>
                                             </th>
-                                        </tr>    
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                         @if (count($customers) == 0)
+                                         @if (count($rooms) == 0)
                                             <tr>
                                             </tr>
                                         @else
-                                            @foreach ($customers as $customer)
-                                                @php
-                                                    $has_profile_picture = ! empty( $customer->profile_picture );
-                                                @endphp
+                                            @foreach ($rooms as $room)
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex">
@@ -95,8 +92,8 @@
                                                                     <div class="checkbox-group d-flex">
                                                                         <div
                                                                             class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                                            <input class="checkbox" type="checkbox" id="check-{{ $customer->id }}">
-                                                                            <label for="check-{{ $customer->id }}"></label>
+                                                                            <input class="checkbox" type="checkbox" id="check-{{ $room->id }}">
+                                                                            <label for="check-{{ $room->id }}"></label>
                                                                         </div>
                                                                     </div>
                                                                 </div>

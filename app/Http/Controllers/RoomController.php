@@ -22,9 +22,15 @@ class RoomController extends Controller
      */
     public function index()
     {
+        $per_page = session( 'pagination_per_page' );
+        $per_page = ( ! empty( $per_page ) ) ? $per_page : 20;
+        $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
+        $offset   = ( $page * $per_page ) - $per_page;
+
+        $rooms   = Room::orderBy('id', 'DESC')->paginate( $per_page );
         $title = "View Room";
         $description = "Some description for the page";
-        return view('room.list', compact('title', 'description'));
+        return view('room.list', compact('title', 'description', 'rooms'));
     }
 
     /**
@@ -32,7 +38,7 @@ class RoomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
+
 
     /**
      * Store a newly created resource in storage.
