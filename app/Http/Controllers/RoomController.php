@@ -95,4 +95,11 @@ class RoomController extends Controller
     {
         //
     }
+
+    public function delete($language, $id)
+     {
+         $find_room = Room::findOrFail($id);
+         $find_room->delete();
+         return redirect()->route('room.list', app()->getLocale())->with('delete', 'Customer deleted successfully !');
+     }
 }
