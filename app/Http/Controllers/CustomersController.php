@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Customer;
+use App\Models\Customers;
 
 use Illuminate\Http\Request;
 
@@ -26,7 +26,7 @@ class CustomersController extends Controller
         $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
         $offset   = ( $page * $per_page ) - $per_page;
 
-        $customers   = Customer::orderBy('id', 'DESC')->paginate( $per_page );
+        $customers   = Customers::orderBy('id', 'DESC')->paginate( $per_page );
         $title       = "Customer List";
         $description = "Some description for the page";
 
@@ -44,7 +44,7 @@ class CustomersController extends Controller
     {
         $title         = 'Edit Customer';
         $description   = 'Some description for the page';
-        $find_customer = Customer::where('id', $id)->get();
+        $find_customer = Customers::where('id', $id)->get();
 
         return view('customer.edit', compact('title', 'description', 'find_customer'));
     }
@@ -58,7 +58,7 @@ class CustomersController extends Controller
 
      public function delete($language, $id)
      {
-         $find_customer = Customer::findOrFail($id);
+         $find_customer = Customers::findOrFail($id);
          $find_customer->delete();
          return redirect()->route('customer.list', app()->getLocale())->with('delete', 'Customer deleted successfully !');
      }

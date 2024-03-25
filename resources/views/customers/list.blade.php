@@ -52,10 +52,10 @@
                                                 </div>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">ID/Passport</span>
+                                                <span class="userDatatable-title">Customer Name</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Customer Name</span>
+                                                <span class="userDatatable-title">ID/Passport</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title">Telephone</span>
@@ -70,7 +70,7 @@
                                                 <span class="userDatatable-title">DOB</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title float-end">Anniversary</span>
+                                                <span class="userDatatable-title">Anniversary</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title float-end">Actions</span>
@@ -82,9 +82,7 @@
                                             <tr>
                                             </tr>
                                         @else
-                                                @php
-                                                    $has_profile_picture = ! empty( $customer->profile_picture );
-                                                @endphp
+                                            @foreach ($customers as $customer)
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex">
@@ -99,44 +97,50 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <a href="#" class="profile-image rounded-circle d-block m-0 wh-38" style="background-image:url('{{ $has_profile_picture ? Helper::get_public_storage_asset_url( $customer->profile_picture ) : asset( 'assets/img/svg/user.svg' ) }}'); background-size: cover;"></a>
                                                             </div>
                                                             <div class="userDatatable-inline-title">
-                                                                <a href="#" class="text-dark fw-500">
-                                                                    <h6>{{ $customer->name }}</h6>
-                                                                </a>
-                                                                <p class="d-block mb-0">
-                                                                    {{ $customer->address == null ? '' : $customer->address }}
-                                                                </p>
+                                                                {{ $customer->id }}
                                                             </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $customer->name }}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $customer->passport }}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $customer->telephone }}
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
                                                             {{ $customer->email }}
+                                                            {{-- {{ $customer->gender == 'male' ? 'Male' : 'Female' }} --}}
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $customer->phone }}
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="userDatatable-content">
-                                                            {{ $customer->profession }}
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="userDatatable-content">
-                                                            {{ $customer->gender == 'male' ? 'Male' : 'Female' }}
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="userDatatable-content d-inline-block">
-                                                            <span
+                                                            {{ $customer->country }}
+                                                            {{-- <span
                                                                 class="bg-opacity-{{ get_status_class( $customer->status ) }}  color-{{ get_status_class( $customer->status ) }} rounded-pill userDatatable-content-status active">
                                                                 {{ get_status_label( $customer->status ) }}
-                                                            </span>
+                                                            </span> --}}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $customer->dob }}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $customer->anniversary }}
                                                         </div>
                                                     </td>
                                                     <td>

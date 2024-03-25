@@ -9,7 +9,7 @@ Route::group(['middleware'=>'auth'],function(){
             Route::get('view',[CustomersController::class,'viewPanel'])->name('view');
             Route::get('list',[CustomersController::class,'list'])->name('list');
             Route::get('edit/{id}',[CustomersController::class,'edit'])->name('edit');
-            Route::get('delete/{id}',[CustomersController::class,'delete'])->name('delete');
+            Route::post('delete/{id}',[CustomersController::class,'delete'])->name('delete');
         });
     });
 });

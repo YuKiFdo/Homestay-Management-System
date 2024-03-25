@@ -16,13 +16,12 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('profile_picture')->default('');
+            $table->string('passport')->unique();
+            $table->string('telephone')->unique();
             $table->string('email')->unique();
-            $table->string('phone')->unique();
-            $table->string('gender');
-            $table->string('profession');
-            $table->string('status')->default('active');
-            $table->text('address')->nullable();
+            $table->string('country');
+            $table->string('dob')->default('N/A');
+            $table->string('anniversary')->default('N/A');
             $table->timestamps();
         });
     }
