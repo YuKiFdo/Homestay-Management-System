@@ -112,7 +112,7 @@
                                             value="{{ old('country') }}">
                                             <option>Select A Country</option>
                                             @foreach ($countries as $country)
-                                               <option value="{{ $country['alpha2'] }}">{{ $country['name'] }}</option>
+                                            <option value="{{ $country['alpha2'] }}" {{ old('country') == $country['alpha2'] ? 'selected' : '' }}>{{ $country['name'] }}</option>
                                             @endforeach
                                         </select>
                                     </div>
