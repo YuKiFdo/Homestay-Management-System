@@ -25,14 +25,15 @@
                         <h6>Register New Customer </h6>
                     </div>
                     <div class="card-body py-md-30">
-                        <form>
+                        <form action="{{ route('customer.store', app()->getLocale()) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-25">
                                     <label for="customer_name">Customer Name <span
                                     class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="la-user lar color-gray"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                        <input type="text" name="name" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputNameIcon" placeholder="">
                                     </div>
                                 </div>
@@ -41,7 +42,7 @@
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-id-card"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                        <input type="text" name="passport" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputIdIcon" placeholder="">
                                     </div>
                                 </div>
@@ -50,7 +51,7 @@
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-mobile"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                        <input type="text" name="telephone" class="form-control  ih-medium ip-gray radius-xs b-light"
                                             id="inputPhoneIcon" placeholder="">
 
                                     </div>
@@ -60,14 +61,14 @@
                                         class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="nav-icon uil uil-envelope"></span>
-                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="InputEmailIcon" placeholder="">
+                                        <input type="text" name="email" class="form-control ih-medium ip-light radius-xs b-light" id="InputEmailIcon" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="dob">Date Of Birth</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
-                                            <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                            <input type="text" name="dob" class="form-control  ih-medium ip-gray radius-xs b-light"
                                                 id="datepicker8" placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
@@ -80,8 +81,8 @@
                                         <div class="position-relative">
                                             <a href="#"><img class="svg"
                                                 src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
-                                            <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                                id="datepicker" placeholder="">
+                                            <input type="text" name="anniversary" class="form-control  ih-medium ip-gray radius-xs b-light"
+                                                id="datepicker8" placeholder="">
 
                                         </div>
                                     </div>
@@ -90,7 +91,7 @@
                                     <div class="form-group">
                                         <label for="country">Country<span
                                             class="text-danger">*</span></label></label>
-                                        <select class="form-control px-15" id="exampleFormControlSelect1">
+                                        <select name="country" class="form-control px-15" id="exampleFormControlSelect1">
                                             <option>Select A Country</option>
                                             <option>Afghanistan</option>
                                             <option>Albania</option>
@@ -287,7 +288,7 @@
                                             <option>Vietnam</option>
                                             <option>Yemen</option>
                                             <option>Zambia</option>
-                                            <option>Zimbabwe</option>  
+                                            <option>Zimbabwe</option>
                                         </select>
                                     </div>
                                 </div>
@@ -301,7 +302,7 @@
                                     <div class="layout-button mt-0 d-flex justify-content-end">
                                         <!-- Changed class to 'd-flex justify-content-end' -->
                                         <button type="button" class="btn btn-default btn-squared border-normal bg-normal px-20 mr-2">Cancel</button> <!-- Added 'mr-2' for right margin -->
-                                        <button type="button" class="btn btn-primary btn-default btn-squared px-30">Save</button>
+                                        <button type="submit" class="btn btn-primary btn-default btn-squared px-30">Save</button>
                                     </div>
                                 </div>
 

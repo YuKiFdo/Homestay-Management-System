@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Customers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CustomersController extends Controller
 {
@@ -32,6 +33,47 @@ class CustomersController extends Controller
 
         return view('customers.list', compact('title', 'description', 'customers'));
     }
+
+     /**
+     * Store a newly created customer resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+     public function store(Request $request)
+     {
+         $validators = Validator::make($request->all(), [
+             'name' => 'required',
+             'passport' => 'required|unique:customers',
+             'telephone' => 'required|numeric|unique:customers',
+             'email' => 'required|email|unique:customers',
+             'country' => 'required'
+         ]);
+
+         if ($validators->fails()) {
+             return redirect()->route('customer.viewPanel', app()->getLocale())->withErrors($validators)->withInput();
+         } else {
+             $customer = new Customers();
+
+             $customer->name       = $request->name;
+             $customer->passport      = $request->passport;
+             $customer->telephone      = $request->telephone;
+             $customer->email     = $request->email;
+             $customer->dob = $request->dob;
+             $customer->country    = $request->country;
+            //  $customer->anniversary     = $request->anniversary || 'N/A';
+            if ($request->anniversary == 0) {
+                $customer->anniversary = 'N/A';
+            } else {
+                $customer->anniversary = $request->anniversary;
+            }
+
+             $customer->save();
+
+             return redirect()->route('customer.list', app()->getLocale())->with('create', 'Customer created successfully !');
+         }
+     }
 
     /**
      * Show the form for editing the specified resource.
