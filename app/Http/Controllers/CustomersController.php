@@ -5,14 +5,18 @@ use App\Models\Customers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use League\ISO3166\ISO3166;
 
 class CustomersController extends Controller
 {
     public function viewPanel()
     {
+        $iso = new ISO3166();
+        $countries = $iso->all();
+
         $title = "Register Customer";
         $description = "Change Application settings";
-        return view('customers.register', compact('title', 'description'));
+        return view('customers.register', compact('title', 'description' , 'countries'));
     }
 
       /**
@@ -48,11 +52,11 @@ class CustomersController extends Controller
              'passport' => 'required|unique:customers',
              'telephone' => 'required|numeric|unique:customers',
              'email' => 'required|email|unique:customers',
-             'country' => 'required'
+             'country' => 'required|not_in:"Select A Country"',
          ]);
 
          if ($validators->fails()) {
-             return redirect()->route('customer.viewPanel', app()->getLocale())->withErrors($validators)->withInput();
+             return redirect()->route('customer.view', app()->getLocale())->withErrors($validators)->withInput();
          } else {
              $customer = new Customers();
 
