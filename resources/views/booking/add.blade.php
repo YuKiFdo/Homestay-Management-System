@@ -144,6 +144,28 @@
                                 <div class="col-md-6">
                                 </div>
 
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td class="order-summery float-right border-0">
+                                                <div class="total-money mt-2 text-end">
+                                                    <h6>Total :</h6>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="total-order float-right text-end fs-14 fw-500">
+                                                    <h5 class="text-primary">$0.00</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                
+
+                                <div class="col-md-6">
+                                </div>
+
                                 <div class="col-md-6 mb-25">
                                     <div class="layout-button mt-0 d-flex justify-content-end">
                                         <!-- Changed class to 'd-flex justify-content-end' -->
