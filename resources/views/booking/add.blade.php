@@ -102,16 +102,18 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-25">
-                                    <div class="form-group">
-                                        <label for="room_type">Packages<span
-                                            class="text-danger">*</span></label></label>
-                                        <select class="form-control px-20" id="exampleFormControlSelect1">
-                                            <option>Tour</option>
-                                            <option>Foods</option>
-                                        </select>
-                                    </div>
+                            <div class="col-md-6 mb-25" class="form-group tagSelect-rtl">
+                                <label>Packages<span class="text-danger">*</span></label>
+                                <div class="dm-select ">
+                                    <select name="select-tag" id="select-tag" class="form-control " multiple="multiple">
+                                        <option value="01">Option 1</option>
+                                        <option value="02">Option 2</option>
+                                        <option value="03">Option 3</option>
+                                        <option value="04">Option 4</option>
+                                        <option value="05">Option 5</option>
+                                    </select>
                                 </div>
+                            </div>
                                 <div class="col-md-6 mb-25">
                                     <label for="phone_number">Check In<span class="text-danger">*</span></label>
                                     <div class="with-icon">
