@@ -43,8 +43,8 @@
                                         <p class="text-danger">{{ $errors->first('name') }}</p>
                                     @endif
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="id_or_passport">ID / Passport<span class="text-danger">*</span></label>
+                                <div class="col-md-6 mb-25">
+                                    <label for="id_or_passport">Room Id<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-id-card"></span>
                                         <input type="text" name="passport"
@@ -56,19 +56,6 @@
                                     @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number">Room Name<span class="text-danger">*</span></label>
-                                    <div class="with-icon">
-                                        <span class="fas fa-home"></span>
-                                        <input type="text" name="telephone"
-                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="inputPhoneIcon"
-                                            value="{{ old('telephone') }}" placeholder="">
-
-                                    </div>
-                                    @if ($errors->has('telephone'))
-                                        <p class="text-danger">{{ $errors->first('telephone') }}</p>
-                                    @endif
-                                </div>
-                                <div class="col-md-6">
                                     <label for="email">Number Of Kids<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-child"></span>
@@ -80,7 +67,7 @@
                                         <p class="text-danger">{{ $errors->first('email') }}</p>
                                     @endif
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-25">
                                     <label for="email">Number Of Adults<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-user"></span>
@@ -91,16 +78,6 @@
                                     @if ($errors->has('email'))
                                         <p class="text-danger">{{ $errors->first('email') }}</p>
                                     @endif
-                                </div>
-                                <div class="col-md-6 mb-25">
-                                    <div class="form-group">
-                                        <label for="room_type">Room Type<span
-                                            class="text-danger">*</span></label></label>
-                                        <select class="form-control px-20" id="exampleFormControlSelect1">
-                                            <option>Ac</option>
-                                            <option>Non Ac</option>
-                                        </select>
-                                    </div>
                                 </div>
                             <div class="col-md-6 mb-25" class="form-group tagSelect-rtl">
                                 <label>Packages<span class="text-danger">*</span></label>
@@ -117,7 +94,7 @@
                                 <div class="col-md-6 mb-25">
                                     <label for="phone_number">Check In<span class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class="fas fa-mobile"></span>
+                                        <span class="fas fa-calendar"></span>
                                         <input type="text" name="telephone"
                                             class="form-control  ih-medium ip-gray radius-xs b-light" id="inputPhoneIcon"
                                             value="{{ old('telephone') }}" placeholder="">
@@ -130,7 +107,7 @@
                                 <div class="col-md-6 mb-25">
                                     <label for="phone_number">Check Out<span class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class="fas fa-mobile"></span>
+                                        <span class="fas fa-calendar"></span>
                                         <input type="text" name="telephone"
                                             class="form-control  ih-medium ip-gray radius-xs b-light" id="inputPhoneIcon"
                                             value="{{ old('telephone') }}" placeholder="">
