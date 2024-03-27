@@ -16,11 +16,15 @@ return new class extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->string('booking_id')->unique();
-            $table->string('cname');
-            $table->string('rname');
+            $table->string('cusid');
+            $table->string('name');
+            $table->string('room_id');
+            $table->string('type');
+            $table->string('bed');
             $table->integer('kids');
             $table->integer('adults');
-            $table->date('ckeckin');
+            $table->string('package');
+            $table->date('checkin');
             $table->date('checkout');
             $table->timestamps();
         });

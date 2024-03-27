@@ -27,10 +27,10 @@ class BookingController extends Controller
         $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
         $offset   = ( $page * $per_page ) - $per_page;
 
-        $booking   = Booking::orderBy('id', 'DESC')->paginate( $per_page );
+        $bookings   = Booking::orderBy('id', 'DESC')->paginate( $per_page );
         $title = "Booking A Room";
         $description = "Some description for the page";
-        return view('booking.list', compact('title', 'description', 'booking'));
+        return view('booking.list', compact('title', 'description', 'bookings'));
     }
 
     /**
