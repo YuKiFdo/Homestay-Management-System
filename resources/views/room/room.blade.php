@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="room_type">Room Type<span
                                             class="text-danger">*</span></label></label>
-                                        <select class="form-control px-20" id="exampleFormControlSelect1">
+                                        <select class="form-control  ih-medium ip-gray radius-xs b-ligh" id="exampleFormControlSelect2">
                                             <option>Ac</option>
                                             <option>Non Ac</option>
                                         </select>
