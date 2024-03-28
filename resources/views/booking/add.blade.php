@@ -46,7 +46,7 @@
                                 <div class="col-md-6 mb-25">
                                     <label for="id_or_passport">Room Id<span class="text-danger">*</span></label>
                                     <div class="with-icon">
-                                        <span class="fas fa-id-card"></span>
+                                        <span class="fas fa-home"></span>
                                         <input type="text" name="passport"
                                             class="form-control  ih-medium ip-gray radius-xs b-light" id="inputIdIcon"
                                             value="{{ old('passport') }}" placeholder="">

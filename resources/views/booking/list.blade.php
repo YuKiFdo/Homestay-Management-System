@@ -32,6 +32,25 @@
                 <div class="card">
                     <div class="card-header color-dark fw-500">
                         Booking List
+                        <div class="project-category d-flex align-items-center ms-md-30 mt-xxl-10 mt-15">
+                            <p class="fs-14 color-gray text-capitalize mb-10 mb-md-0  me-10">Status :</p>
+                            <div class="project-tap order-project-tap global-shadow">
+                                <ul class="nav px-1" id="ap-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="ap-overview-tab" data-bs-toggle="pill" href="#ap-overview" role="tab" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="timeline-tab" data-bs-toggle="pill" href="#timeline" role="tab" aria-selected="false">Allocated</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="activity-tab" data-bs-toggle="pill" href="#activity" role="tab" aria-selected="false">Not Allocated</a>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link" id="draft-tab" data-bs-toggle="pill" href="#draft" role="tab" aria-selected="false">Canceled</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
                         <button type="button" class="order-bg-opacity-secondary text-secondary btn radius-md">Export</button>
                     </div>
 
@@ -55,16 +74,10 @@
                                                 <span class="userDatatable-title">Customer ID</span>
                                             </th>
                                             <th>
-                                                <span class="userDatatable-title">Customer Name</span>
-                                            </th>
-                                            <th>
                                                 <span class="userDatatable-title">Room ID</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title">Room Type</span>
-                                            </th>
-                                            <th>
-                                                <span class="userDatatable-title">Bed  Type</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title">No Of Kids</span>
@@ -74,6 +87,9 @@
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title">Packages</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Status</span>
                                             </th>
                                             <th>
                                                 <span class="userDatatable-title float-end">Checkin</span>
@@ -119,11 +135,6 @@
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $booking->name }}
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="userDatatable-content">
                                                             {{ $booking->room_id }}
                                                         </div>
                                                     </td>
@@ -133,15 +144,15 @@
                                                             {{-- {{ $customer->gender == 'male' ? 'Male' : 'Female' }} --}}
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    {{--<td>
                                                         <div class="userDatatable-content">
                                                             {{ $booking->bed }}
-                                                            {{-- <span
+                                                             <span
                                                                 class="bg-opacity-{{ get_status_class( $customer->status ) }}  color-{{ get_status_class( $customer->status ) }} rounded-pill userDatatable-content-status active">
                                                                 {{ get_status_label( $customer->status ) }}
-                                                            </span> --}}
+                                                            </span> 
                                                         </div>
-                                                    </td>
+                                                    </td>--}}
                                                     <td>
                                                         <div class="userDatatable-content">
                                                             {{ $booking->kids }}
@@ -158,13 +169,20 @@
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <div class="userDatatable-content">
-                                                            {{ $booking->package }}
+                                                        <div class="orderDatatable-status d-inline-block">
+                                                            <span class="order-bg-opacity-success  text-success rounded-pill active">
+                                                            {{ $booking->status }}
+                                                            </span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="userDatatable-content">
-                                                            {{ $booking->package }}
+                                                            {{ $booking->checkin }}
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="userDatatable-content">
+                                                            {{ $booking->checkout }}
                                                         </div>
                                                     </td>
                                                     <td>

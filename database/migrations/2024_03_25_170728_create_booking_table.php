@@ -17,13 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('booking_id')->unique();
             $table->string('cusid');
-            $table->string('name');
             $table->string('room_id');
             $table->string('type');
-            $table->string('bed');
             $table->integer('kids');
             $table->integer('adults');
             $table->string('package');
+            $table->string('status');
             $table->date('checkin');
             $table->date('checkout');
             $table->timestamps();
