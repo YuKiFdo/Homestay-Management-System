@@ -51,11 +51,11 @@
                                         <label for="bed_type">Bed Type<span
                                             class="text-danger">*</span></label></label>
                                         <select class="form-control px-15" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>Single</option>
+                                            <option>Double</option>
+                                            <option>Thrible</option>
+                                            <option>King</option>
+                                            <!--<option>5</option>-->
                                         </select>
                                     </div>
                                 </div>
