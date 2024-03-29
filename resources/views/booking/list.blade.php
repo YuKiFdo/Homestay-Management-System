@@ -23,6 +23,11 @@
                             </form>
 
                         </div>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Booking Rooms</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.booking-list') }}
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
