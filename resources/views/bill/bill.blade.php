@@ -13,7 +13,7 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>{{ trans('menu.bill-menu-title') }}</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.bill-bill') }}</li>
+                                            <li class="breadcrumb-item active" aria-current="page">{{ trans('menu.bill-invoice') }}</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -36,9 +36,8 @@
                                         </a>
                                     </div>
                                     <div class="payment-invoice-address__area">
-                                        <address>Admin Company<br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107, USA<br>
-                                            Reg.
-                                            number : 245000003513</address>
+                                        <address>Surathura Homestay<br> Gattuwana Road,<br> Kurunegala, Sri Lanka<br>
+                                             Telephone Number : 037 223 1957 <br> Mobile Number : 071 908 3331</address>
                                     </div>
                                 </div><!-- End: .payment-invoice-address -->
                                 <div class="payment-invoice-qr d-flex justify-content-between mb-40 px-xl-50 px-30 py-sm-30 py-20 ">
@@ -47,35 +46,30 @@
                                             <div class="display-3">
                                                 Invoice
                                             </div>
-                                            <p>No : <span>#642678</span></p>
-                                            <p>Date : <span>Jan 17, 2020</span></p>
+                                            <p>No : <span>#00001</span></p>
+                                            <p>Date : <span>Mar 17, 2024</span></p>
                                         </div>
                                     </div><!-- End: .d-flex -->
-                                    <div class="d-flex justify-content-center mb-lg-0 mb-25">
-                                        <div class="payment-invoice-qr__code bg-white radius-xl p-20">
-                                            <img src="{{ asset('assets/img/qr.png') }}" alt="qr">
-                                            <p>8364297359912267</p>
-                                        </div>
-                                    </div><!-- End: .d-flex -->
+                                    
                                     <div class="d-flex justify-content-center">
                                         <div class="payment-invoice-qr__address">
                                             <p>Invoice To:</p>
-                                            <span>Stanley Jones</span><br>
-                                            <span>795 Folsom Ave, Suite 600</span><br>
+                                            <span>BK - 001</span><br>
+                                            <span>Mahinda Rajapaksha</span><br>
                                             <span>San Francisco, CA 94107, USA</span>
                                         </div>
                                     </div><!-- End: .d-flex -->
                                 </div><!-- End: .payment-invoice-qr -->
                                 <div class="payment-invoice-table">
                                     <div class="table-responsive">
-                                        <table id="cart" class="table table-borderless">
+                                        <table id="cart" class="table table-borderless" >
                                             <thead>
                                                 <tr class="product-cart__header">
                                                     <th scope="col">#</th>
-                                                    <th scope="col">Product</th>
-                                                    <th scope="col" class="text-end">Price Per Unit</th>
+                                                    <th scope="col">Description</th>
+                                                    <th scope="col" class="text-end"></th>
                                                     <th scope="col" class="text-end">Quantity</th>
-                                                    <th scope="col" class="text-end">Order Total</th>
+                                                    <th scope="col" class="text-end">Total</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -84,37 +78,121 @@
                                                     <td class="Product-cart-title">
                                                         <div class="media  align-items-center">
                                                             <div class="media-body">
-                                                                <h5 class="mt-0">Fiber base chair</h5>
+                                                                <h5 class="mt-0">Room Charge</h5>
                                                                 <div class="d-flex">
-                                                                    <p>Size:<span>large</span></p>
-                                                                    <p>color:<span>brown</span></p>
-
+                                                                    <p>Room Type:<span>A/C</span></p>
+                                                                    <p>Bed Type:<span>Double</span></p>
+                                                                    <p>Nights:<span>4</span></p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="unit text-end">$248.66</td>
-                                                    <td class="invoice-quantity text-end">1</td>
-                                                    <td class="text-end order">$5.11</td>
+                                                    <td class="unit text-end"></td>
+                                                    <td class="invoice-quantity text-end"></td>
+                                                    <td class="text-end order">$120.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1"></td>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <h3 class="mt-0">Additional Packages</h3>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <th>1</th>
                                                     <td class="Product-cart-title">
                                                         <div class="media  align-items-center">
                                                             <div class="media-body">
-                                                                <h5 class="mt-0">Fiber base chair</h5>
-                                                                <div class="d-flex">
-                                                                    <p>Size:<span>large</span></p>
-                                                                    <p>color:<span>brown</span></p>
-
-                                                                </div>
+                                                                <h5 class="mt-0">Sigiriya Tour Package</h5>
+                                                
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="unit text-end">$248.66</td>
-                                                    <td class="invoice-quantity text-end">2</td>
-                                                    <td class="text-end order">$5.11</td>
+                                                    <td class="unit text-end"></td>
+                                                    <td class="invoice-quantity text-end"></td>
+                                                    <td class="text-end order">$35.00</td>
                                                 </tr>
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <div class="media-body">
+                                                                <h5 class="mt-0">Airport Shuttle</h5>
+                                                
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="unit text-end"></td>
+                                                    <td class="invoice-quantity text-end"></td>
+                                                    <td class="text-end order">$50.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1"></td>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <h3 class="mt-0">Orders</h3>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>1</th>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <div class="media-body">
+                                                                <h5 class="mt-0">Lunch Package</h5>
+                                                                <div class="">
+                                                                    <p>Additional:<span>Fried Chicken 01</span></p>
+                                                               
+                                                                    <p>Additional:<span>Vegetable Soup 01</span></p>
+                                                                </div>
+                                                
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                          
+                                                    <td colspan="2" class="invoice-quantity text-end">4</td>
+                                                    <td class="text-end order">$45.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <div class="media-body">
+                                                                <h5 class="mt-0">Special Package</h5>
+                                                                <div class="">
+                                                                    <p>Name: <span> Sri Lankan Kalukum </span></p>
+                                                                </div>
+                                                
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                          
+                                                    <td colspan="2" class="invoice-quantity text-end">1</td>
+                                                    <td class="text-end order">$55.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1"></td>
+                                                    <td class="Product-cart-title">
+                                                        <div class="media  align-items-center">
+                                                            <h3 class="mt-0">Others</h3>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <th>1</th>
+                                                <td class="Product-cart-title">
+                                                    <div class="media  align-items-center">
+                                                        <div class="media-body">
+                                                            <h5 class="mt-0">Laundary</h5>
+                                                          
+                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                      
+                                                <td colspan="2" class="invoice-quantity text-end">20</td>
+                                                <td class="text-end order">$20.00</td>
+                                            </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -122,26 +200,31 @@
                                                     <td class="order-summery float-right border-0   ">
                                                         <div class="total">
                                                             <div class="subtotalTotal mb-0 text-end">
+                                                                Service Charge :
+                                                            </div>
+                                                            <div class="subtotalTotal mb-0 text-end">
                                                                 Subtotal :
                                                             </div>
                                                             <div class="taxes mb-0 text-end">
                                                                 discount :
                                                             </div>
-                                                            <div class="shipping mb-0 text-end">
-                                                                Shipping charge :
-                                                            </div>
+                                                           
                                                         </div>
                                                         <div class="total-money mt-2 text-end">
-                                                            <h6>Total :</h6>
+                                                            <h6>Total <span style="color: black">(USD)</span> : </h6>
+                                                        </div>
+                                                        <div class="total-money mt-2 text-end">
+                                                            <h6>Total <span style="color: black">(LKR)</span> :</h6>
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="total-order float-right text-end fs-14 fw-500">
-                                                            <p>$1,690.26</p>
+                                                            <p> $10 (5%)</p>
+                                                            <p>$350.26</p>
                                                             <p>-$126.30</p>
-                                                            <p>$46.30</p>
-                                                            <h5 class="text-primary">$1736.00</h5>
+                                                            <h5 >$210.30</h5>
+                                                            <h5 class="mt-2">Rs.65,000.00</h5>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -152,7 +235,7 @@
                                         <button type="button" class="btn border rounded-pill bg-normal text-gray px-25 print-btn">
                                             <img src="{{ asset('assets/img/svg/printer.svg') }}" alt="printer" class="svg">print</button>
                                         <button type="button" class="btn border rounded-pill bg-normal text-gray px-25">
-                                            <img src="{{ asset('assets/img/svg/send.svg') }}" alt="send" class="svg">invoice</button>
+                                            <img src="{{ asset('assets/img/svg/send.svg') }}" alt="send" class="svg">send invoice</button>
                                         <button type="button" class="btn-primary btn rounded-pill px-25 text-white download">
                                             <img src="{{ asset('assets/img/svg/upload.svg') }}" alt="upload" class="svg">download</button>
                                     </div>
