@@ -1,7 +1,7 @@
 <!-- # color red  -->
 <h1 style="color:lightblue">Homestay Management System</h1>
 
-Homestay Management System is a web application built with Blade (Laravel 10) and MSSQL. It helps in managing homestay bookings, sending notifications via email and SMS, and utilizes Bootstrap, jQuery, and Tailwind CSS for the frontend.
+Homestay Management System is a web application built with Blade (Laravel 10) and MSSQL. It helps in managing homestay bookings, sending notifications via email and SMS, and utilizes Bootstrap, jQuery, and CSS for the frontend.
 
 ## Features
 
