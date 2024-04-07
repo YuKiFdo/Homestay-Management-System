@@ -1,18 +1,26 @@
 <div class="sidebar__menu-group">
     <ul class="sidebar_nav">
+        {{-- Dashboard --}}
+        <li  class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}">
+            <a class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}"  href="{{ route('dashboard.main',app()->getLocale()) }}">
+                <span class="nav-icon uil uil-create-dashboard"></span>
+                <span class="menu-text">{{ trans('menu.dashboard-menu-title') }}</span>
+                {{-- <span class="toggle-icon"></span> --}}
+            </a>
+        </li>
         {{-- Customer Area --}}
         <li class="menu-title mt-30">
             <span>Application</span>
         </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/customers/*') ? 'open':'' }}">
-            <a href="#" class="{{ Request::is(app()->getLocale().'/customers/*') ? 'active':'' }}">
+        <li class="has-child {{ Request::is(app()->getLocale().'/customer/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/customer/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-user-circle"></span>
                 <span class="menu-text">{{ trans('menu.customers-menu-title') }}</span>
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/customers/register') ? 'active':'' }}" href="{{ route('customer.view',app()->getLocale()) }}">{{ trans('menu.customers-add') }}</a></li>
-                <li><a class="{{ Request::is(app()->getLocale().'/customers/list') ? 'active':'' }}" href="{{ route('customer.list',app()->getLocale()) }}">{{ trans('menu.customers-list') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/customer/view') ? 'active':'' }}"><a href="{{ route('customer.view',app()->getLocale()) }}">{{ trans('menu.customers-add') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/customer/list') ? 'active':'' }}"> <a href="{{ route('customer.list',app()->getLocale()) }}">{{ trans('menu.customers-list') }}</a></li>
             </ul>
         </li>
 
@@ -24,8 +32,8 @@
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/room/room') ? 'active':'' }}" href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
-                <li><a class="{{ Request::is(app()->getLocale().'/room/list') ? 'active':'' }}" href="{{ route('room.list',app()->getLocale()) }}">{{ trans('menu.room-list') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/room/view') ? 'active':'' }}"> <a  href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/room/list') ? 'active':'' }}"> <a href="{{ route('room.list',app()->getLocale()) }}">{{ trans('menu.room-list') }}</a></li>
             </ul>
         </li>
 
@@ -37,13 +45,13 @@
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/booking/booking') ? 'active':'' }}" href="{{ route('booking.view',app()->getLocale()) }}">{{ trans('menu.booking-add') }}</a></li>
-                <li><a class="{{ Request::is(app()->getLocale().'/booking/list') ? 'active':'' }}" href="{{ route('booking.list',app()->getLocale()) }}">{{ trans('menu.booking-list') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/booking/view') ? 'active':'' }}"> <a  href="{{ route('booking.view',app()->getLocale()) }}">{{ trans('menu.booking-add') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/booking/list') ? 'active':'' }}"> <a  href="{{ route('booking.list',app()->getLocale()) }}">{{ trans('menu.booking-list') }}</a></li>
             </ul>
         </li>
 
         {{-- Bill Area --}}
-        <li class="has-child {{ Request::is(app()->getLocale().'/bill/*') ? 'open':'' }}">
+        {{-- <li class="has-child {{ Request::is(app()->getLocale().'/bill/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/bill/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-receipt"></span>
                 <span class="menu-text">{{ trans('menu.bill-menu-title') }}</span>
@@ -52,39 +60,23 @@
             <ul>
                 <li><a class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}" href="{{ route('bill.view',app()->getLocale()) }}">{{ trans('menu.bill-invoice') }}</a></li>
             </ul>
-        </li>
+        </li> --}}
 
         {{-- Admin Area --}}
         <li class="menu-title mt-30">
             <span>Administration</span>
         </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/admin/*') ? 'open':'' }}">
-            <a href="#" class="{{ Request::is(app()->getLocale().'/admin/*') ? 'active':'' }}">
+        <li class="has-child {{ Request::is(app()->getLocale().'/application/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/application/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-user-circle"></span>
                 <span class="menu-text">{{ trans('menu.application-menu-title') }}</span>
                 <span class="toggle-icon"></span>
             </a>
             <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/admin/application/config') ? 'active':'' }}" href="{{ route('application.config',app()->getLocale()) }}">{{ trans('menu.application-config') }}</a></li>
+                <li class="{{ Request::is(app()->getLocale().'/application/config') ? 'active':'' }}"> <a  href="{{ route('application.config',app()->getLocale()) }}">{{ trans('menu.application-config') }}</a></li>
             </ul>
         </li>
-        {{-- Dashboard --}}
-        <li class="menu-title mt-30">
-            <span>Project</span>
-        </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/dog/*') ? 'open':'' }}">
-            <a href="#" class="{{ Request::is(app()->getLocale().'/dog/*') ? 'active':'' }}">
-                <span class="nav-icon fas fa-dog"></span>
-                <span class="menu-text">{{ trans('menu.dog-menu-title') }}</span>
-                <span class="toggle-icon"></span>
-            </a>
-            <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/dog/create') ? 'active':'' }}" href="{{ route('dog.create',app()->getLocale()) }}">{{ trans('menu.dog-add') }}</a></li>
-                {{-- List --}}
-                <li><a class="{{ Request::is(app()->getLocale().'/dog/list') ? 'active':'' }}" href="{{ route('dog.list',app()->getLocale()) }}"> {{ trans('menu.dog-list') }}</a></li>
-            </ul>
-        </li>
-
+{{--
         <li class="menu-title mt-30">
             <span>Examples</span>
         </li>
@@ -127,7 +119,7 @@
                 <span class="menu-text">{{ trans('menu.changelog-menu-title') }}</span>
                 <span class="badge badge-info-10 menuItem rounded-pill">1.0.1</span>
             </a>
-        </li>
+        </li> --}}
         <li class="menu-title mt-30">
             <span>Applications</span>
         </li>
