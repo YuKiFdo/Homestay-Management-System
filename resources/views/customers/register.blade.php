@@ -144,4 +144,13 @@
             </div>
         </div>
     </div>
+    @if (session('message'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var successData = {!! json_encode(session('message')) !!};
+            showMsg(successData);
+        });
+    </script>
+    @endif
+    <div class="message-wrapper"></div>
 @endsection

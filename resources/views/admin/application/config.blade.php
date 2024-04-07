@@ -30,7 +30,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-25">
-                                    <label for="application_name">Application Name <span
+                                    <label for="application_name">Homestay Name <span
                                             class="text-danger">*</span></label>
                                     <input id="application_name" type="text"
                                         class="form-control ih-medium ip-gray radius-xs b-light px-15 @error('application_name') is-invalid @enderror"
@@ -42,10 +42,23 @@
                                         </span>
                                     @enderror
                                 </div>
+                                <div class="col-md-6 mb-25">
+                                    <label for="application_address">Homestay Address <span
+                                            class="text-danger">*</span></label>
+                                    <input id="application_address" type="text"
+                                        class="form-control ih-medium ip-gray radius-xs b-light px-15 @error('application_address') is-invalid @enderror"
+                                        name="application_address"
+                                        value="{{ old('application_address') ?? config('application.address') }}" required>
+                                    @error('application_address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-25">
-                                    <label for="application_logo">Application Logo</label>
+                                    <label for="application_logo">Homestay Logo</label>
                                     <div class="dm-tag-wrap">
                                         <div class="dm-upload">
                                             <div class="dm-upload__button">

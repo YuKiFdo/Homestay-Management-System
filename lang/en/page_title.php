@@ -3,7 +3,7 @@
     return [
         'dashboard'=>'Dashboard',
         'main'=>'Main Dashboard',
-        'demo_two'=>'Demo 2',
+        'demo_two'=>'Main Dashboard',
         'demo_three'=>'Demo 3',
         'demo_four'=>'Demo 4',
         'demo_six'=>'Demo 6',
