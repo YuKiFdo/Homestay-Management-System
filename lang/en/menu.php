@@ -1,9 +1,9 @@
 <?php
 
     return [
-        // Admin Area
-        'application-menu-title' => 'Application',
-        'application-config' => 'Configuration',
+        'dashboard-menu-title' => 'Dashboard',
+        'dashboard-main' => 'main',
+
         //
         'dog-menu-title' => 'Dog Section',
         'dog-add' => 'Add Dog',
@@ -20,17 +20,18 @@
         'booking-menu-title' => 'Booking Rooms',
         'booking-add' => 'Booking A Room',
         'booking-list' => 'Booking View',
+        // Admin Area
+        'application-menu-title' => 'Application',
+        'application-config' => 'Configuration',
         //Bill Area
         'bill-menu-title' => 'Bill',
         'bill-invoice' => 'Invoice',
-        
+
 
 
 
 
         //
-        'dashboard-menu-title' => 'Dashboard',
-        'dashboard-demo-one' => 'Demo 1',
         'dashboard-demo-two' => 'Demo 2',
         'dashboard-demo-three' => 'Demo 3',
         'dashboard-demo-four' => 'Demo 4',
