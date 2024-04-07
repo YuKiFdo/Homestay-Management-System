@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller {
-    
+
     /**
-     * Display dashbnoard demo one of the resource.
+     * Display dashbnoard
      *
      * @return \Illuminate\View\View
      */
     public function index(){
-        $title = "Dashboard Demo One";
-        $description = "Some description for the page";
+        $title = "Dashboard";
+        $description = "Insights about your business";
         return view('pages.dashboard.demo_one',compact('title','description'));
     }
 

@@ -11,8 +11,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>{{ trans('page_title.dashboard') }}</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ trans('page_title.demo_one') }}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ trans('page_title.main') }}</li>
                             </ol>
                         </nav>
                     </div>
@@ -24,7 +23,7 @@
             @include('components.dashboard.demo_one.sales_location')
             @include('components.dashboard.demo_one.top_sale_products')
             @include('components.dashboard.demo_one.browser_state')
-            
+
         </div>
     </div>
 </div>

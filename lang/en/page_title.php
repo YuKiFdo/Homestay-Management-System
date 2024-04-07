@@ -2,7 +2,7 @@
 
     return [
         'dashboard'=>'Dashboard',
-        'demo_one'=>'Demo 1',
+        'main'=>'Main Dashboard',
         'demo_two'=>'Demo 2',
         'demo_three'=>'Demo 3',
         'demo_four'=>'Demo 4',
