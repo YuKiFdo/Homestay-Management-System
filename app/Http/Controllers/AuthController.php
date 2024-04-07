@@ -85,7 +85,11 @@ class AuthController extends Controller {
                     'type' => 'success', // 'success', 'warning', 'danger', 'info
                     'icon' => 'check-circle' // exclamation-triangle, check-circle, times-circle, info-circle
                 ];
-                return redirect()->intended(route('dashboard.main','en'))->with('message', $messageData);
+                if(Auth::user()->type == 'admin'){
+                    return redirect()->intended(route('dashboard.main','en'))->with('message', $messageData);
+                }else{
+                    return redirect()->intended(route('customer.view','en'))->with('message', $messageData);
+                }
             }else{
                 $messageData = [
                     'text' => 'Username or Password is incorrect !',

@@ -51,9 +51,19 @@ class ApplicationController extends Controller
 
     public function viewConfig()
     {
+        if (auth()->user()->type != 'admin'){
+            return redirect()->route('application.perms', app()->getLocale());
+        }
         $title = "Application Configuration";
         $description = "Change Application settings";
         return view('admin.application.config', compact('title', 'description'));
+    }
+
+    public function noPerm()
+    {
+        $title = "No Permission";
+        $description = "You do not have permission to access this page";
+        return view('admin.permission', compact('title', 'description'));
     }
 
 }

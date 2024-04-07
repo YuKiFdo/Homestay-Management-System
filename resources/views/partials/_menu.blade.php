@@ -1,13 +1,14 @@
 <div class="sidebar__menu-group">
     <ul class="sidebar_nav">
         {{-- Dashboard --}}
+        @if (Auth::user()->type == 'admin')
         <li  class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}">
             <a class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}"  href="{{ route('dashboard.main',app()->getLocale()) }}">
                 <span class="nav-icon uil uil-create-dashboard"></span>
                 <span class="menu-text">{{ trans('menu.dashboard-menu-title') }}</span>
-                {{-- <span class="toggle-icon"></span> --}}
             </a>
         </li>
+        @endif
         {{-- Customer Area --}}
         <li class="menu-title mt-30">
             <span>Application</span>
@@ -51,6 +52,7 @@
         </li>
 
         {{-- Admin Area --}}
+        @if (Auth::user()->type == 'admin')
         <li class="menu-title mt-30">
             <span>Administration</span>
         </li>
@@ -64,6 +66,8 @@
                 <li class="{{ Request::is(app()->getLocale().'/application/config') ? 'active':'' }}"> <a  href="{{ route('application.config',app()->getLocale()) }}">{{ trans('menu.application-config') }}</a></li>
             </ul>
         </li>
+        @endif
+
 {{--
         <li class="menu-title mt-30">
             <span>Examples</span>
@@ -108,7 +112,7 @@
                 <span class="badge badge-info-10 menuItem rounded-pill">1.0.1</span>
             </a>
         </li> --}}
-        <li class="menu-title mt-30">
+        {{-- <li class="menu-title mt-30">
             <span>Applications</span>
         </li>
         <li class="has-child {{ Request::is(app()->getLocale().'/applications/email/*') ? 'open':'' }}">
@@ -156,8 +160,8 @@
                 <li><a href="{{ route('project.project_detail',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/project/project-detail') ? 'active':'' }}">{{ trans('menu.project-detail') }}</a></li>
                 <li><a href="{{ route('project.create_project',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/project/create') ? 'active':'' }}">{{ trans('menu.create-project') }}</a></li>
             </ul>
-        </li>
-        <li>
+        </li> --}}
+        {{-- <li>
             <a href="{{ route('calendar',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/calendar') ? 'active':'' }}">
                 <span class="nav-icon uil uil-calendar-alt"></span>
                 <span class="menu-text">{{ trans('menu.calendar-menu-title') }}</span>
@@ -220,8 +224,8 @@
                 <li><a class="{{ Request::is(app()->getLocale().'/applications/import_export/export') ? 'active':'' }}" href="{{ route('import_export.export',app()->getLocale()) }}">{{ trans('menu.ie-export') }}</a></li>
                 <li><a class="{{ Request::is(app()->getLocale().'/applications/import_export/export-selected') ? 'active':'' }}" href="{{ route('import_export.export_selected',app()->getLocale()) }}">{{ trans('menu.ie-export-selected') }}</a></li>
             </ul>
-        </li>
-        <li>
+        </li> --}}
+        {{-- <li>
             <a href="{{ route('filemanager',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/filemanager') ? 'active':'' }}">
                 <span class="nav-icon uil uil-repeat"></span>
                 <span class="menu-text">{{ trans('menu.filemanager-menu-title') }}</span>
@@ -354,8 +358,8 @@
                 <li><a class="{{ Request::is(app()->getLocale().'/ui/timepicker') ? 'active':'' }}" href="{{ route('ui.timepicker',app()->getLocale()) }}">{{ trans('menu.ui-time-picker') }}</a></li>
                 <li><a class="{{ Request::is(app()->getLocale().'/ui/uploads') ? 'active':'' }}" href="{{ route('ui.uploads',app()->getLocale()) }}">{{ trans('menu.ui-upload') }}</a></li>
             </ul>
-        </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/chart/*') ? 'open':'' }}">
+        </li> --}}
+        {{-- <li class="has-child {{ Request::is(app()->getLocale().'/chart/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/chart/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-chart"></span>
                 <span class="menu-text">{{ trans('menu.chart-menu-title') }}</span>
@@ -419,8 +423,8 @@
                 <li><a href="{{ route('icon.awesome',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/icon/awesome') ? 'active':'' }}">{{ trans('menu.icon-awesome') }}</a></li>
                 <li><a href="{{ route('icon.lineawesome',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/icon/lineawesome') ? 'active':'' }}">{{ trans('menu.icon-line') }}</a></li>
             </ul>
-        </li>
-        <li>
+        </li> --}}
+        {{-- <li>
             <a href="{{ route('editor',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/editor') ? 'active':'' }}">
                 <span class="nav-icon uil uil-edit"></span>
                 <span class="menu-text">{{ trans('menu.editor-menu-title') }}</span>
@@ -508,8 +512,8 @@
                 <span class="nav-icon uil uil-headphones"></span>
                 <span class="menu-text">{{ trans('menu.support-menu-title') }}</span>
             </a>
-        </li>
-        <li class="has-child {{ Request::is(app()->getLocale().'/pages/blog/*') ? 'open':'' }}">
+        </li> --}}
+        {{-- <li class="has-child {{ Request::is(app()->getLocale().'/pages/blog/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/pages/blog/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-images"></span>
                 <span class="menu-text">{{ trans('menu.blog-menu-title') }}</span>
@@ -551,17 +555,6 @@
                 <span class="nav-icon uil uil-sync"></span>
                 <span class="menu-text">{{ trans('menu.coming-soon-menu-title') }}</span>
             </a>
-        </li>
-        @if(Request::is(app()->getLocale().'/dashboards/demo-five'))
-            <div class="card sidebar__feature shadow-none bg-transparent border-0 py-sm-50 px-sm-35 text-center">
-                <div class="px-15 mb-sm-35 mb-20">
-                    <img src="{{ asset('assets/img/sidebar-feature.png') }}" alt="book">
-                </div>
-                <h3>Get More Feature by Upgrading</h3>
-                <button type="button" class="btn btn-primary inline-flex mt-sm-35 mt-20">
-                    Go Premium
-                </button>
-            </div>
-        @endif
+        </li> --}}
     </ul>
 </div>
