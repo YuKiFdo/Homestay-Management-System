@@ -10,7 +10,7 @@ function createmsg(text, type, icon) {
     <span class="dm-pop-message__text">
         <p>${text}</p>
     </span>
-    </div>\n`  
+    </div>\n`
     o.append(t),
     messageCounts++
 }

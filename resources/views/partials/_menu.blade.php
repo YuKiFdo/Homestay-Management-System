@@ -50,18 +50,6 @@
             </ul>
         </li>
 
-        {{-- Bill Area --}}
-        {{-- <li class="has-child {{ Request::is(app()->getLocale().'/bill/*') ? 'open':'' }}">
-            <a href="#" class="{{ Request::is(app()->getLocale().'/bill/*') ? 'active':'' }}">
-                <span class="nav-icon uil uil-receipt"></span>
-                <span class="menu-text">{{ trans('menu.bill-menu-title') }}</span>
-                <span class="toggle-icon"></span>
-            </a>
-            <ul>
-                <li><a class="{{ Request::is(app()->getLocale().'/bill/bill') ? 'active':'' }}" href="{{ route('bill.view',app()->getLocale()) }}">{{ trans('menu.bill-invoice') }}</a></li>
-            </ul>
-        </li> --}}
-
         {{-- Admin Area --}}
         <li class="menu-title mt-30">
             <span>Administration</span>
@@ -546,12 +534,12 @@
                 <span class="menu-text">{{ trans('menu.maintenance-menu-title') }}</span>
             </a>
         </li>
-        <!-- <li>
+         <li>
             <a href="{{ route('pages.setting',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/pages/setting') ? 'active':'' }}">
                 <span class="nav-icon uil uil-setting"></span>
                 <span class="menu-text">{{ trans('menu.setting-menu-title') }}</span>
             </a>
-        </li> -->
+        </li>
         <li>
             <a href="{{ route('pages.404',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/pages/404') ? 'active':'' }}">
                 <span class="nav-icon uil uil-exclamation-triangle"></span>

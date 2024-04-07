@@ -8,7 +8,7 @@ use Auth;
 use App\Models\User;
 
 class AuthController extends Controller {
-    
+
     /**
      * Display login of the resource.
      *
@@ -45,7 +45,7 @@ class AuthController extends Controller {
     /**
      * make the user able to register
      *
-     * @return 
+     * @return
      */
     public function signup(Request $request){
         $validators=Validator::make($request->all(),[
@@ -62,14 +62,14 @@ class AuthController extends Controller {
             $user->password = bcrypt($request->password);
             $user->save();
             auth()->login($user);
-            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');            
+            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
         }
     }
 
     /**
      * make the user able to login
      *
-     * @return 
+     * @return
      */
     public function authenticate(Request $request){
         $validators=Validator::make($request->all(),[
@@ -80,9 +80,19 @@ class AuthController extends Controller {
             return redirect()->route('login')->withErrors($validators)->withInput();
         }else{
             if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
-                return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Welcome back !');
+                $messageData = [
+                    'text' => 'Welcome Back - ' . Auth::user()->name . ' !',
+                    'type' => 'success', // 'success', 'warning', 'danger', 'info
+                    'icon' => 'check-circle' // exclamation-triangle, check-circle, times-circle, info-circle
+                ];
+                return redirect()->intended(route('dashboard.main','en'))->with('message', $messageData);
             }else{
-                return redirect()->route('login')->with('message','Login failed !Email/Password is incorrect !');
+                $messageData = [
+                    'text' => 'Username or Password is incorrect !',
+                    'type' => 'warning', // 'success', 'warning', 'danger', 'info
+                    'icon' => 'exclamation-triangle' // exclamation-triangle, check-circle, times-circle, info-circle
+                ];
+                return redirect()->route('login')->with('message', $messageData);
             }
         }
     }
@@ -90,10 +100,15 @@ class AuthController extends Controller {
     /**
      * make the user able to logout
      *
-     * @return 
+     * @return
      */
-    public function logout(){  
-        Auth::logout(); 
-        return redirect()->route('login')->with('message','Successfully Logged out !');       
+    public function logout(){
+        Auth::logout();
+        $messageData = [
+            'text' => 'Successfully Logged out !',
+            'type' => 'success', // 'success', 'warning', 'danger', 'info
+            'icon' => 'check-circle' // exclamation-triangle, check-circle, times-circle, info-circle
+        ];
+        return redirect()->route('login')->with('message', $messageData);
     }
 }
