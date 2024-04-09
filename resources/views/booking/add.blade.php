@@ -92,29 +92,29 @@
                                 </div>
                             </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number">Check In<span class="text-danger">*</span></label>
+                                    <label for="checkin">Check In<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-calendar"></span>
-                                        <input type="text" name="telephone"
-                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="inputPhoneIcon"
-                                            value="{{ old('telephone') }}" placeholder="">
+                                        <input type="text" name="checkin"
+                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker8"
+                                            value="{{ old('checkin') }}" placeholder="">
 
                                     </div>
-                                    @if ($errors->has('telephone'))
-                                        <p class="text-danger">{{ $errors->first('telephone') }}</p>
+                                    @if ($errors->has('checkin'))
+                                        <p class="text-danger">{{ $errors->first('checkout') }}</p>
                                     @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="phone_number">Check Out<span class="text-danger">*</span></label>
+                                    <label for="checkout">Check Out<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-calendar"></span>
-                                        <input type="text" name="telephone"
-                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="inputPhoneIcon"
-                                            value="{{ old('telephone') }}" placeholder="">
+                                        <input type="text" name="checkout"
+                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker9"
+                                            value="{{ old('checkout') }}" placeholder="">
 
                                     </div>
-                                    @if ($errors->has('telephone'))
-                                        <p class="text-danger">{{ $errors->first('telephone') }}</p>
+                                    @if ($errors->has('checkout'))
+                                        <p class="text-danger">{{ $errors->first('checkout') }}</p>
                                     @endif
                                 </div>
                                 <div class="col-md-6">
@@ -140,7 +140,7 @@
                                     </table>
                                 </div>
 
-                                
+
 
                                 <div class="col-md-6">
                                 </div>

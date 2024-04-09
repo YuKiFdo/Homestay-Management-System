@@ -85,7 +85,7 @@
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
                                             <input type="text" name="dob"
-                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker8"
+                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker9"
                                                 placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
@@ -96,11 +96,11 @@
                                     <label for="anniversary">Anniversary</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
-                                            <a href="#"><img class="svg"
-                                                    src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
                                             <input type="text" name="anniversary"
-                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker8"
+                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker9"
                                                 placeholder="">
+                                                <a href="#"><img class="svg"
+                                                    src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
 
                                         </div>
                                     </div>
