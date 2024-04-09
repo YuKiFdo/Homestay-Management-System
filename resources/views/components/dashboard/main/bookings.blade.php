@@ -15,69 +15,101 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th scope="col">Booking ID</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Room Type</th>
-                            <th scope="col">Check In</th>
-                            <th scope="col">Check Out</th>
-                            <th scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#BK-025</td>
-                            <td>Sriyani Silva</td>
-                            <td>Deluxe Room</td>
-                            <td>12/12/2024</td>
-                            <td>15/12/2024</td>
-                            <td><span class="badge bg-success">Confirmed</span></td>
-                        </tr>
-                        <tr>
-                            <td>#BK-024</td>
-                            <td>Jason Thunder</td>
-                            <td>King Room</td>
-                            <td>12/12/2024</td>
-                            <td>15/12/2024</td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#BK-023</td>
-                            <td>Kasun Kalhara</td>
-                            <td>Double Room</td>
-                            <td>12/12/2024</td>
-                            <td>15/12/2024</td>
-                            <td><span class="badge bg-danger">Cancelled</span></td>
-                        </tr>
-                        <tr>
-                            <td>#BK-022</td>
-                            <td>Shihan Sebastian</td>
-                            <td>Deluxe Room</td>
-                            <td>12/05/2024</td>
-                            <td>15/05/2024</td>
-                            <td><span class="badge bg-success">Confirmed</span></td>
-                        </tr>
-                        <tr>
-                            <td>#BK-021</td>
-                            <td>Krishan Mihiranga</td>
-                            <td>Single Room</td>
-                            <td>12/04/2024</td>
-                            <td>15/04/2024</td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>#BK-020</td>
-                            <td>Mahinda Rajapaksha</td>
-                            <td>Deluxe Room</td>
-                            <td>12/11/2024</td>
-                            <td>15/11/2024</td>
-                            <td><span class="badge bg-danger">Cancelled</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="">
+                <div class="table-responsive">
+                    <table class="table mb-0 table-borderless">
+                        <thead>
+                            <tr class="userDatatable-header">
+                                <th scope="col">Booking ID</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Room Type</th>
+                                <th scope="col">Check In</th>
+                                <th scope="col">Check Out</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-025</td>
+                                <td>Sriyani Silva</td>
+                                <td>Deluxe Room</td>
+                                <td>12/12/2024</td>
+                                <td>15/12/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-warning  color-warning userDatatable-content-status active">Pending</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-024</td>
+                                <td>Jason Thunder</td>
+                                <td>King Room</td>
+                                <td>12/12/2024</td>
+                                <td>15/12/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-danger  color-danger userDatatable-content-status active">Cancelled</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-023</td>
+                                <td>Kasun Kalhara</td>
+                                <td>Double Room</td>
+                                <td>12/12/2024</td>
+                                <td>15/12/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-success  color-success userDatatable-content-status active">Confirmed</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-022</td>
+                                <td>Shihan Sebastian</td>
+                                <td>Deluxe Room</td>
+                                <td>12/05/2024</td>
+                                <td>15/05/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-success  color-success userDatatable-content-status active">Confirmed</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-021</td>
+                                <td>Krishan Mihiranga</td>
+                                <td>Single Room</td>
+                                <td>12/04/2024</td>
+                                <td>15/04/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-warning  color-warning userDatatable-content-status active">Pending</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK-020</td>
+                                <td>Mahinda Rajapaksha</td>
+                                <td>Deluxe Room</td>
+                                <td>12/11/2024</td>
+                                <td>15/11/2024</td>
+                                <td>
+                                    <div class="userDatatable-content d-inline-block">
+                                        <span
+                                            class="bg-opacity-danger  color-danger userDatatable-content-status active">Cancelled</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

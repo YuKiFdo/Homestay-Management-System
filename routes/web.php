@@ -5,7 +5,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\SaleRevenueController;
-require __DIR__.'/dog.php';
 require __DIR__.'/admin/application.php';
 
 /*
