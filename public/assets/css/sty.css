@@ -10704,6 +10704,11 @@ body.top-menu .navbar-left .customizer-trigger+.top-menu {
     background: rgba(var(--color-success-rgba), .1)
 }
 
+/* danger */
+.ap-po-details--luodcy .ap-po-details__icon-area.color-danger::before {
+    background: rgba(var(--color-danger-rgba), .1)
+}
+
 .ap-po-details--luodcy .ap-po-details__icon-area:before {
     content: "";
     position: absolute;

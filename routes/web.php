@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaginationController;
+use App\Http\Controllers\SaleRevenueController;
 require __DIR__.'/dog.php';
 require __DIR__.'/admin/application.php';
 
@@ -25,6 +26,12 @@ Route::group(['middleware'=>'guest'],function(){
     Route::post('/authenticate',[AuthController::class,'authenticate'])->name('authenticate');
     Route::post('/signup',[AuthController::class,'signup'])->name('signup');
 });
+
+
+// Chart Routes
+Route::get('/get-sales-revenue', [SaleRevenueController::class, 'getSalesRevenue']);
+Route::get('/get-weekly-sales-revenue', [SaleRevenueController::class, 'getWeeklySalesRevenue']);
+Route::get('/get-monthly-sales-revenue', [SaleRevenueController::class, 'getMonthlySalesRevenue']);
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
 Route::get('/lang/{lang}',[ LanguageController::class,'switchLang'])->name('switch_lang');

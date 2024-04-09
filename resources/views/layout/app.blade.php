@@ -68,7 +68,7 @@
     </script>
     <script src="{{ asset('assets/js/plugins.min.js') }}"></script>
     <script src="{{ asset('assets/js/notifications.js') }}"></script>
-    <script src="{{ asset('assets/js/script.min.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
     <script src="{{ asset('js/app.min.js') }}"></script>
 </body>
 </html>

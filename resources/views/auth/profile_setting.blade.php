@@ -25,7 +25,7 @@
                             <div
                                 class="account-profile border-bottom pt-25 px-25 pb-0 flex-column d-flex align-items-center ">
                                 <div class="ap-img mb-20 pro_img_wrapper">
-                                    <img class="ap-img__main rounded-circle wh-120"
+                                    <img class="ap-img__main2 rounded-circle wh-120"
                                         src="{{ asset('storage/' . Auth::user()->profilepic) }}" alt="profile">
                                 </div>
                                 <div class="ap-nameAddress pb-3">
@@ -82,7 +82,9 @@
                                                                 <div class="ap-img mb-20 pro_img_wrapper">
                                                                     <input id="file-upload" type="file" name="profilepic"
                                                                         class="d-none">
+                                                                          {{-- want to show preview of uploaded pic --}}
                                                                     <label for="file-upload">
+
                                                                         <img class="ap-img__main rounded-circle wh-120"
                                                                             src="{{ asset('storage/' . Auth::user()->profilepic) }}"
                                                                             alt="profile">
@@ -201,4 +203,15 @@
         </script>
     @endif
     <div class="message-wrapper"></div>
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.querySelector('.ap-img__main').setAttribute('src', e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
 @endsection
