@@ -7,7 +7,7 @@
     <title>{{ $title }} - {{ config('application.name') }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/plugin.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sty.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/variables.css') }}">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon.png') }}">
@@ -56,7 +56,7 @@
                                                         <span class="checkbox-text">Keep me logged in</span>
                                                     </label>
                                                 </div>
-                                                <a href="{{ route('forget_password') }}">forget password?</a>
+                                                {{-- <a href="{{ route('forget_password') }}">forget password?</a> --}}
                                             </div>
                                             <div class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
                                                 <button class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn ">
@@ -88,15 +88,26 @@
             </div>
         </div>
     </div>
-    <div class="enable-dark-mode dark-trigger">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="uil uil-moon"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <script>
+        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+        let overlayer = document.getElementById('overlayer');
+
+        if (isDarkMode) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+
+        function enableDarkMode() {
+            overlayer.classList.remove('overlayer-light');
+            overlayer.classList.add('overlayer-dark');
+        }
+
+        function disableDarkMode() {
+            overlayer.classList.remove('overlayer-dark');
+            overlayer.classList.add('overlayer-light');
+        }
+    </script>
     <script src="{{ asset('assets/js/plugins.min.js') }}"></script>
     <script src="{{ asset('assets/js/notifications.js') }}"></script>
     <script src="{{ asset('assets/js/script.min.js') }}"></script>
@@ -109,6 +120,25 @@
      });
  </script>
  @endif
+ <script>
+    $(document).ready(function() {
+        let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+        if (isDarkMode) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+
+        function enableDarkMode() {
+            $('body').addClass('layout-dark');
+        }
+
+        function disableDarkMode() {
+            $('body').removeClass('layout-dark');
+        }
+    });
+</script>
  <div class="message-wrapper"></div>
 </body>
 

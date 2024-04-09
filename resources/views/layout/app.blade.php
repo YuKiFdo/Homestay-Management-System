@@ -23,7 +23,7 @@
             @include('partials._footer')
         </footer>
     </main>
-    <div id="overlayer">
+    <div id="overlayer" class="overlayer-light">
         <span class="loader-overlay">
             <div class="dm-spin-dots spin-lg">
                 <span class="spin-dot badge-dot dot-primary"></span>
@@ -40,6 +40,25 @@
     </div>
 
     <script>
+            try {
+                // Retrieve dark mode setting from local storage
+                let isDarkMode = localStorage.getItem('darkMode') === 'true';
+                let overlayer = document.getElementById('overlayer');
+                console.log('isDarkMode:', isDarkMode);
+
+                if (isDarkMode) {
+
+                    overlayer.classList.remove('overlayer-light');
+                    overlayer.classList.add('overlayer-dark');
+                } else {
+                    overlayer.classList.remove('overlayer-dark');
+                    overlayer.classList.add('overlayer-light');
+                }
+            } catch (error) {
+                console.error('Error accessing localStorage:', error);
+            }
+    </script>
+    <script>
         var env = {
             iconLoaderUrl: "{{ asset('assets/js/json/icons.json') }}",
             googleMarkerUrl: "{{ asset('assets/img/markar-icon.png') }}",
@@ -47,7 +66,6 @@
             mapClockIcon: "{{ asset('assets/img/svg/clock-ticket1.sv') }}g"
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
     <script src="{{ asset('assets/js/plugins.min.js') }}"></script>
     <script src="{{ asset('assets/js/notifications.js') }}"></script>
     <script src="{{ asset('assets/js/script.min.js') }}"></script>
