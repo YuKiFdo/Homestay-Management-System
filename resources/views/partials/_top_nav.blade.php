@@ -756,7 +756,7 @@
             <li class="nav-author">
                 <div class="dropdown-custom">
                     <a href="javascript:;" class="nav-item-toggle"><img
-                            src="{{ asset('assets/img/author-nav.jpg') }}" alt="" class="rounded-circle">
+                            src="{{ asset('storage/' . Auth::user()->profilepic) }}" alt="" class="rounded-circle">
                         @if (Auth::check())
                             <span class="nav-item__title">{{ Auth::user()->name }}<i
                                     class="las la-angle-down nav-item__arrow"></i></span>
@@ -765,20 +765,20 @@
                     <div class="dropdown-wrapper">
                         <div class="nav-author__info">
                             <div class="author-img">
-                                <img src="{{ asset('assets/img/author-nav.jpg') }}" alt=""
+                                <img src="{{ asset('storage/' . Auth::user()->profilepic) }}" alt=""
                                     class="rounded-circle">
                             </div>
                             <div>
                                 @if (Auth::check())
                                     <h6 class="text-capitalize">{{ Auth::user()->name }}</h6>
                                 @endif
-                                <span>UI Designer</span>
+                                <span>{{ Auth::user()->email }}</span>
                             </div>
                         </div>
                         <div class="nav-author__options">
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('application.profile', app()->getLocale()) }}">
                                         <img src="{{ asset('assets/img/svg/user.svg') }}" alt="user"
                                             class="svg"> Profile</a>
                                 </li>
