@@ -25,57 +25,71 @@
                         <h6>Add New Room</h6>
                     </div>
                     <div class="card-body py-md-30">
-                        <form>
+                        <form action="{{ route('room.store', app()->getLocale()) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-25">
-                                    <label for="room_name">Room Name <span
-                                    class="text-danger">*</span></label>
+                                    <label for="room_name">Room Name <span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-house-user"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                            id="inputNameIcon" placeholder="">
+                                        <input type="text" name="room_name" value="{{ old('room_name') }}"
+                                            class="form-control  ih-medium ip-gray radius-xs b-light" id="inputNameIcon"
+                                            placeholder="">
                                     </div>
+                                    @if ($errors->has('room_name'))
+                                        <p class="text-danger">{{ $errors->first('room_name') }}</p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="room_type">Room Type<span
-                                            class="text-danger">*</span></label></label>
-                                        <select class="form-control  ih-medium ip-gray radius-xs b-ligh" id="exampleFormControlSelect2">
-                                            <option>Ac</option>
-                                            <option>Non Ac</option>
+                                        <label for="room_type">Room Type<span class="text-danger">*</span></label></label>
+                                        <select class="form-control px-15" id="exampleFormControlSelect1" name="room_type">
+                                            <option>A/C</option>
+                                            <option>non A/C</option>
                                         </select>
                                     </div>
+                                    @if ($errors->has('room_type'))
+                                        <p class="text-danger">{{ $errors->first('room_type') }}</p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
                                     <div class="form-group">
-                                        <label for="bed_type">Bed Type<span
-                                            class="text-danger">*</span></label></label>
-                                        <select class="form-control px-15" id="exampleFormControlSelect1">
+                                        <label for="bed_type">Bed Type<span class="text-danger">*</span></label></label>
+                                        <select class="textfd form-control px-15" id="exampleFormControlSelect2"
+                                            name="bed_type">
                                             <option>Single</option>
                                             <option>Double</option>
-                                            <option>Thrible</option>
+                                            <option>Thriple</option>
                                             <option>King</option>
-                                            <!--<option>5</option>-->
                                         </select>
                                     </div>
+                                    @if ($errors->has('bed_type'))
+                                        <p class="text-danger">{{ $errors->first('bed_type') }}</p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="kid_price">Kid Price<span
-                                        class="text-danger">*</span></label>
+                                    <label for="kid_price">Kid Price<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-child"></span>
-                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" id="InputEmailIcon" placeholder="">
+                                        <input type="text" class="form-control ih-medium ip-light radius-xs b-light" value="{{ old('kids_price') }}"
+                                            id="InputEmailIcon" name="kids_price" placeholder="">
                                     </div>
+                                    @if ($errors->has('kids_price'))
+                                        <p class="text-danger">{{ $errors->first('kids_price') }}</p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-25">
-                                    <label for="adult_price">Adult Price<span
-                                        class="text-danger">*</span></label>
+                                    <label for="adult_price">Adult Price<span class="text-danger">*</span></label>
                                     <div class="with-icon">
                                         <span class="fas fa-user"></span>
-                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light"
-                                            id="inputPhoneIcon" placeholder="">
+                                        <input type="text" class="form-control  ih-medium ip-gray radius-xs b-light" value="{{ old('adult_price') }}"
+                                            id="inputPhoneIcon" name="adult_price" placeholder="">
 
                                     </div>
+                                    @if ($errors->has('adult_price'))
+                                        <p class="text-danger">{{ $errors->first('adult_price') }}</p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6">
                                 </div>
@@ -84,13 +98,16 @@
                                 </div>
 
                                 <!--<div class="col-md-6">
-                                </div>-->
+                                    </div>-->
 
                                 <div class="col-md-6 mb-25">
                                     <div class="layout-button mt-0 d-flex justify-content-end">
                                         <!-- Changed class to 'd-flex justify-content-end' -->
-                                        <button type="button" class="btn btn-default btn-squared border-normal bg-normal px-20 mr-2">Cancel</button> <!-- Added 'mr-2' for right margin -->
-                                        <button type="button" class="btn btn-primary btn-default btn-squared px-30">Save</button>
+                                        <button type="button"
+                                            class="btn btn-default btn-squared border-normal bg-normal px-20 mr-2">Cancel</button>
+                                        <!-- Added 'mr-2' for right margin -->
+                                        <button type="submit"
+                                            class="btn btn-primary btn-default btn-squared px-30">Save</button>
                                     </div>
                                 </div>
 
@@ -101,4 +118,14 @@
             </div>
         </div>
     </div>
+
+    @if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var successData = {!! json_encode(session('success')) !!};
+            showMsg(successData);
+        });
+    </script>
+    @endif
+    <div class="message-wrapper"></div>
 @endsection

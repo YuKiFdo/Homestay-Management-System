@@ -1,5 +1,5 @@
 <?php return array (
-  'name' => 'Surathura Homestay',
+  'name' => 'HMS',
   'logo' => 'assets/img/admin/application/logo.png',
   'address' => 'Kurunegala',
   'email' => 'surathura.homestay@gmail.com',

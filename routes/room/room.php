@@ -8,6 +8,7 @@ Route::group(['middleware'=>'auth'],function(){
         Route::group(['prefix' =>'room','as'=>'room.'],function(){
             Route::get('view',[RoomController::class,'view'])->name('view');
             Route::get('list',[RoomController::class,'index'])->name('list');
+            Route::post('store',[RoomController::class,'store'])->name('store');
             Route::get('edit/{id}',[RoomController::class,'edit'])->name('edit');
             Route::get('delete/{id}',[RoomController::class,'delete'])->name('delete');
         });

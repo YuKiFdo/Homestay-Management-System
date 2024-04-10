@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Room;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class RoomController extends Controller
 {
@@ -48,8 +49,35 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validators = Validator::make($request->all(), [
+            'room_name' => 'required',
+            'room_type' => 'required',
+            'bed_type' => 'required',
+            'kids_price' => 'required|numeric',
+            'adult_price' => 'required|numeric',
+        ]);
+
+        if ($validators->fails()) {
+            return redirect()->route('room.view', app()->getLocale())->withErrors($validators)->withInput();
+        } else {
+            $room = new Room();
+            $room->name = $request->room_name;
+            $room->type = $request->room_type;
+            $room->bedtype = $request->bed_type;
+            $room->kidprice = $request->kids_price;
+            $room->adultprice = $request->adult_price;
+            $room->save();
+
+            $messageData = [
+                'text' => 'Room added successfully!!',
+                'type' => 'success', // 'success', 'warning', 'danger', 'info
+                'icon' => 'check-circle'
+            ];
+            return redirect()->route('room.view', app()->getLocale())->with('success', $messageData);
+        }
+
     }
+
 
     /**
      * Display the specified resource.

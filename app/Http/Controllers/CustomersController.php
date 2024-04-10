@@ -76,7 +76,14 @@ class CustomersController extends Controller
 
              $customer->save();
 
-             return redirect()->route('customer.list', app()->getLocale())->with('create', 'Customer created successfully !');
+             $messageData = [
+                'text' => 'Customer created successfully !',
+                'type' => 'success', // 'success', 'warning', 'danger', 'info
+                'icon' => 'check-circle'
+                // Add more messages as needed
+            ];
+
+             return redirect()->route('customer.list', app()->getLocale())->with('message', $messageData);
          }
      }
 
