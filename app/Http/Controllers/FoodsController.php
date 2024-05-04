@@ -1,19 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Room;
+use App\Models\Food;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
-class RoomController extends Controller
+class FoodsController extends Controller
 {
 
     public function view()
     {
-        $title = "Add Room";
+        $title = "Add Food";
         $description = "Change Application settings";
-        return view('room.room', compact('title', 'description'));
+        return view('foods.add', compact('title', 'description'));
     }
 
     /**
@@ -28,10 +27,10 @@ class RoomController extends Controller
         $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
         $offset   = ( $page * $per_page ) - $per_page;
 
-        $rooms   = Room::orderBy('id', 'DESC')->paginate( $per_page );
-        $title = "View Room";
+        $foods   = Food::orderBy('id', 'DESC')->paginate( $per_page );
+        $title = "View Foods";
         $description = "Some description for the page";
-        return view('room.list', compact('title', 'description', 'rooms'));
+        return view('food.list', compact('title', 'description', 'foods'));
     }
 
     /**
@@ -49,29 +48,7 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        // $validators = Validator::make($request->all(), [
-        //     'name' => 'required',
-        //     'type' => 'required|unique:customers',
-        //     'bedtype' => 'required',
-        //     'kidprice' => 'required|double',
-        //     'adultprice' => 'required|double',
-        // ]);
-
-        // if ($validators->fails()) {
-        //     return redirect()->route('room.view', app()->getLocale())->withErrors($validators)->withInput();
-        // } else {
-        //     $room = new Room();
-
-        //     $room->name     =  $request->name;
-        //     $room->type       = $request->type;
-        //     $room->bedtype      = $request->bedtype;
-        //     $room->kidprice      = $request->kidprice;
-        //     $room->adultprice     = $request->adultprice;
-
-            
-
-        //     return redirect()->route('room.list', app()->getLocale())->with('create', 'Room created successfully !');
-        // }
+        //
     }
 
     /**
@@ -93,11 +70,7 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-        // $title         = 'Edit Room';
-        // $description   = 'Some description for the page';
-        // $find_room = Room::where('id', $id)->get();
-
-        // return view('room.edit', compact('title', 'description', 'find_room'));
+        //
     }
 
     /**
@@ -125,8 +98,8 @@ class RoomController extends Controller
 
     public function delete($language, $id)
      {
-        //  $find_room = Room::findOrFail($id);
-        //  $find_room->delete();
-        //  return redirect()->route('room.list', app()->getLocale())->with('delete', 'Customer deleted successfully !');
+         $find_food = Food::findOrFail($id);
+         $find_food->delete();
+         return redirect()->route('food.list', app()->getLocale())->with('delete', 'Customer deleted successfully !');
      }
 }

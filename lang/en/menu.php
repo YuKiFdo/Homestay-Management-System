@@ -4,6 +4,12 @@
         // Admin Area
         'application-menu-title' => 'Application',
         'application-config' => 'Configuration',
+        // Foods Area
+        'foods-menu-title' => 'Foods',
+        'foods-add' => 'Add Foods',
+        // Food Area
+        'food-menu-title' => 'Foods',
+        'food-list' => 'View Foods',
         //
         'dog-menu-title' => 'Dog Section',
         'dog-add' => 'Add Dog',

@@ -493,7 +493,7 @@
                     <input class="form-control me-sm-2 box-shadow-none" type="search" placeholder="Search..." aria-label="Search">
                 </form>
             </li>
-            <li class="nav-message">
+            {{-- <li class="nav-message">
                 <div class="dropdown-custom">
                     <a href="javascript:;" class="nav-item-toggle icon-active">
                         <img class="svg" src="{{ asset('assets/img/svg/message.svg') }}" alt="img">
@@ -764,7 +764,7 @@
                         </div>
                     @endif
                 </div>
-            </li>
+            </li> --}}
             <li class="nav-author">
                 <div class="dropdown-custom">
                     <a href="javascript:;" class="nav-item-toggle"><img src="{{ asset('assets/img/author-nav.jpg') }}" alt="" class="rounded-circle">
@@ -794,7 +794,7 @@
                                     <a href="">
                                         <img src="{{ asset('assets/img/svg/settings.svg') }}" alt="settings" class="svg"> Settings</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="">
                                         <img src="{{ asset('assets/img/svg/key.svg') }}" alt="key" class="svg"> Billing</a>
                                 </li>
@@ -805,7 +805,7 @@
                                 <li>
                                     <a href="">
                                         <img src="{{ asset('assets/img/svg/bell.svg') }}" alt="bell" class="svg"> Help</a>
-                                </li>
+                                </li> --}}
                             </ul>
                             <a href="" class="nav-author__signout" onclick="event.preventDefault();document.getElementById('logout').submit();">
                                 <img src="{{ asset('assets/img/svg/log-out.svg') }}" alt="log-out" class="svg">

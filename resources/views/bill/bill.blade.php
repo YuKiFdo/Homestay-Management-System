@@ -31,8 +31,7 @@
                                 <div class="payment-invoice-address d-flex justify-content-sm-between">
                                     <div class="payment-invoice-logo">
                                         <a href="index.html">
-                                            <img class="svg dark" src="{{ asset('assets/img/logo-dark.svg') }}" alt="">
-                                            <img class="svg light" src="{{ asset('assets/img/logo-white.svg') }}" alt="">
+                                            <img src="{{ asset('storage/' . config('application.logo')) }}" alt="img">
                                         </a>
                                     </div>
                                     <div class="payment-invoice-address__area">

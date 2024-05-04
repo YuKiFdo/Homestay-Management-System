@@ -119,7 +119,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <td colspan="3"></td>
-                                                    <td class="order-summery float-right border-0   ">
+                                                    <td class="order-summery float-right border-0">
                                                         <div class="total">
                                                             <div class="subtotalTotal mb-0 text-end">
                                                                 Subtotal :

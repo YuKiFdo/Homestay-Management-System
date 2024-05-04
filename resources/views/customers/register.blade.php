@@ -96,11 +96,12 @@
                                     <label for="anniversary">Anniversary</label>
                                     <div class="form-group form-group-calender mb-20">
                                         <div class="position-relative">
+                                            <input type="text" name="anniversary"
+                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker"
+                                                placeholder="">
                                             <a href="#"><img class="svg"
                                                     src="{{ asset('assets/img/svg/calendar.svg') }}" alt="calendar"></a>
-                                            <input type="text" name="anniversary"
-                                                class="form-control  ih-medium ip-gray radius-xs b-light" id="datepicker8"
-                                                placeholder="">
+                                            
 
                                         </div>
                                     </div>
