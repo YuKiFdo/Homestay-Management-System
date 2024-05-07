@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('bill_id')->unique();
             $table->string('cusid');
             $table->string('room_id');
-            $table->string('total');
+            $table->float('total');
             $table->string('discount');
             $table->timestamps();
         });
