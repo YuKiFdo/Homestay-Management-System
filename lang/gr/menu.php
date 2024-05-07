@@ -1,6 +1,30 @@
 <?php
 
     return [
+
+        //Customer Area
+        'customers-menu-title' => 'Customer',
+        'customers-add' => 'Register Customer',
+        'customers-list' => 'View Customer',
+        //Room Area
+        'room-menu-title' => 'Room',
+        'room-add' => 'Add Room',
+        'room-list' => 'View Room',
+        //Booking Area
+        'booking-menu-title' => 'Booking Rooms',
+        'booking-add' => 'Booking A Room',
+        'booking-list' => 'Booking View',
+        //Food Area
+        'food-menu-title' => 'Foods',
+        'food-list' => 'View Foods',
+        'order-add' => 'Order Foods',
+        'order-list' => 'View Orders',
+        //Admin Area
+        'application-menu-title' => 'Application',
+        'application-config' => 'Configuration',
+        //Foods Area
+        'foods-add' => 'Add Foods',
+
         'dashboard-menu-title' => 'Armaturenbrett',
         'dashboard-demo-one' => 'Demo Eins',
         'dashboard-demo-two' => 'Demo Zwei',

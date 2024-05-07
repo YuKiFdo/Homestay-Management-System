@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Food;
+use App\Models\Order;
 
 use Illuminate\Http\Request;
 
-class FoodsController extends Controller
+class OrderController extends Controller
 {
 
     public function view()
     {
-        $title = "Add Food";
+        $title = "Order Foods";
         $description = "Change Application settings";
-        return view('foods.add', compact('title', 'description'));
+        return view('food.order', compact('title', 'description'));
     }
 
     /**
@@ -27,10 +27,11 @@ class FoodsController extends Controller
         $page     = ( ! empty( $_GET['page'] ) ) ? $_GET['page'] : 1;
         $offset   = ( $page * $per_page ) - $per_page;
 
-        $foods   = Food::orderBy('id', 'DESC')->paginate( $per_page );
-        $title = "View Foods";
+        $orders   = Order::orderBy('id', 'DESC')->paginate( $per_page );
+        $title = "View Orders";
         $description = "Some description for the page";
-        return view('food.list', compact('title', 'description', 'foods'));
+
+        return view('food.vieworder', compact('title', 'description', 'orders'));
     }
 
     /**
@@ -70,7 +71,11 @@ class FoodsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title         = 'Edit Order';
+        $description   = 'Some description for the page';
+        $find_order = Order::where('id', $id)->get();
+
+        return view('orders.edit', compact('title', 'description', 'find_order'));
     }
 
     /**
@@ -98,9 +103,9 @@ class FoodsController extends Controller
 
     public function delete($language, $id)
      {
-         $find_food = Food::findOrFail($id);
-         $find_food->delete();
-         return redirect()->route('foods.list', app()->getLocale())->with('delete', 'Food deleted successfully !');
+         $find_order = Order::findOrFail($id);
+         $find_order->delete();
+         return redirect()->route('orders.list', app()->getLocale())->with('delete', 'Order deleted successfully !');
      }
 
 
