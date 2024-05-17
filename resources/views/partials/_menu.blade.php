@@ -50,6 +50,21 @@
             </ul>
         </li>
 
+        {{-- Food Area --}}
+                {{-- Food Area --}}
+                <li class="has-child {{ Request::is(app()->getLocale().'/food/*') ? 'open':'' }}">
+                    <a href="#" class="{{ Request::is(app()->getLocale().'/food/*') ? 'active':'' }}">
+                        <span class="nav-icon uil uil-utensils"></span>
+                        <span class="menu-text">{{ trans('menu.food-menu-title') }}</span>
+                        <span class="toggle-icon"></span>
+                    </a>
+                    <ul>
+                        <li><a class="{{ Request::is(app()->getLocale().'/food/list') ? 'active':'' }}" href="{{ route('foods.list',app()->getLocale()) }}">{{ trans('menu.food-list') }}</a></li>
+                        <li><a class="{{ Request::is(app()->getLocale().'/food/order') ? 'active':'' }}" href="{{ route('order.view',app()->getLocale()) }}">{{ trans('menu.order-add') }}</a></li>
+                        <li><a class="{{ Request::is(app()->getLocale().'/food/vieworder') ? 'active':'' }}" href="{{ route('order.list',app()->getLocale()) }}">{{ trans('menu.order-list') }}</a></li>
+                    </ul>
+                </li>
+
         {{-- Admin Area --}}
         @if (Auth::user()->type == 'admin')
         <li class="menu-title mt-30">
@@ -65,6 +80,17 @@
             <ul>
             <li class="{{ Request::is(app()->getLocale().'/admin/room/view') ? 'active':'' }}"> <a  href="{{ route('room.view',app()->getLocale()) }}">{{ trans('menu.room-add') }}</a></li>
         </ul>
+        </li>
+
+        <li class="has-child {{ Request::is(app()->getLocale().'/food/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/food/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-utensils"></span>
+                <span class="menu-text">{{ trans('menu.food-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+                <li><a class="{{ Request::is(app()->getLocale().'/food/add') ? 'active':'' }}" href="{{ route('foods.view',app()->getLocale()) }}">{{ trans('menu.foods-add') }}</a></li>
+            </ul>
         </li>
 
 

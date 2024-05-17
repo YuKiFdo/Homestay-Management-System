@@ -31,13 +31,12 @@
                                 <div class="payment-invoice-address d-flex justify-content-sm-between">
                                     <div class="payment-invoice-logo">
                                         <a href="index.html">
-                                            <img class="svg dark" src="{{ asset('assets/img/logo-dark.svg') }}" alt="">
-                                            <img class="svg light" src="{{ asset('assets/img/logo-white.svg') }}" alt="">
+                                            <img src="{{ asset('storage/' . config('application.logo')) }}" alt="img">
                                         </a>
                                     </div>
                                     <div class="payment-invoice-address__area">
-                                        <address>Surathura Homestay<br> Gattuwana Road,<br> Kurunegala, Sri Lanka<br>
-                                             Telephone Number : 037 223 1957 <br> Mobile Number : 071 908 3331</address>
+                                        <address>Surathura Homestay<br> {{ config('application.address') }}<br>
+                                             Telephone Number : 037 223 1957 <br> Mobile Number : {{ config('application.phone') }}</address>
                                     </div>
                                 </div><!-- End: .payment-invoice-address -->
                                 <div class="payment-invoice-qr d-flex justify-content-between mb-40 px-xl-50 px-30 py-sm-30 py-20 ">
@@ -50,7 +49,7 @@
                                             <p>Date : <span>Mar 17, 2024</span></p>
                                         </div>
                                     </div><!-- End: .d-flex -->
-                                    
+
                                     <div class="d-flex justify-content-center">
                                         <div class="payment-invoice-qr__address">
                                             <p>Invoice To:</p>
@@ -105,7 +104,7 @@
                                                         <div class="media  align-items-center">
                                                             <div class="media-body">
                                                                 <h5 class="mt-0">Sigiriya Tour Package</h5>
-                                                
+
                                                             </div>
                                                         </div>
                                                     </td>
@@ -119,7 +118,7 @@
                                                         <div class="media  align-items-center">
                                                             <div class="media-body">
                                                                 <h5 class="mt-0">Airport Shuttle</h5>
-                                                
+
                                                             </div>
                                                         </div>
                                                     </td>
@@ -143,14 +142,14 @@
                                                                 <h5 class="mt-0">Lunch Package</h5>
                                                                 <div class="">
                                                                     <p>Additional:<span>Fried Chicken 01</span></p>
-                                                               
+
                                                                     <p>Additional:<span>Vegetable Soup 01</span></p>
                                                                 </div>
-                                                
+
                                                             </div>
                                                         </div>
                                                     </td>
-                          
+
                                                     <td colspan="2" class="invoice-quantity text-end">4</td>
                                                     <td class="text-end order">$45.00</td>
                                                 </tr>
@@ -163,11 +162,11 @@
                                                                 <div class="">
                                                                     <p>Name: <span> Sri Lankan Kalukum </span></p>
                                                                 </div>
-                                                
+
                                                             </div>
                                                         </div>
                                                     </td>
-                          
+
                                                     <td colspan="2" class="invoice-quantity text-end">1</td>
                                                     <td class="text-end order">$55.00</td>
                                                 </tr>
@@ -184,12 +183,12 @@
                                                     <div class="media  align-items-center">
                                                         <div class="media-body">
                                                             <h5 class="mt-0">Laundary</h5>
-                                                          
-                                            
+
+
                                                         </div>
                                                     </div>
                                                 </td>
-                      
+
                                                 <td colspan="2" class="invoice-quantity text-end">20</td>
                                                 <td class="text-end order">$20.00</td>
                                             </tr>
@@ -208,7 +207,7 @@
                                                             <div class="taxes mb-0 text-end">
                                                                 discount :
                                                             </div>
-                                                           
+
                                                         </div>
                                                         <div class="total-money mt-2 text-end">
                                                             <h6>Total <span style="color: black">(USD)</span> : </h6>
@@ -233,7 +232,7 @@
                                     </div>
                                     <div class="payment-invoice__btn mt-xxl-50 pt-xxl-30">
                                         <button type="button" class="btn border rounded-pill bg-normal text-gray px-25 print-btn">
-                                            <img src="{{ asset('assets/img/svg/printer.svg') }}" alt="printer" class="svg">print</button>
+                                            <img src="{{ asset('assets/img/svg/printer.svg') }}" id="print-btn" alt="printer" class="svg">print</button>
                                         <button type="button" class="btn border rounded-pill bg-normal text-gray px-25">
                                             <img src="{{ asset('assets/img/svg/send.svg') }}" alt="send" class="svg">send invoice</button>
                                         <button type="button" class="btn-primary btn rounded-pill px-25 text-white download">

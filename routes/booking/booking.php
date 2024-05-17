@@ -11,6 +11,7 @@ Route::group(['middleware'=>'auth'],function(){
             Route::get('list',[BookingController::class,'index'])->name('list');
             Route::get('edit/{id}',[BookingController::class,'edit'])->name('edit');
             Route::post('delete/{id}',[BookingController::class,'delete'])->name('delete');
+            Route::get('invoice/{id}',[BookingController::class,'invoice'])->name('invoice');
         });
     });
 });

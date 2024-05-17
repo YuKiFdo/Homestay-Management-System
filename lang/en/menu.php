@@ -26,10 +26,14 @@
         //Bill Area
         'bill-menu-title' => 'Bill',
         'bill-invoice' => 'Invoice',
-
-
-
-
+          // Foods Area
+          'foods-menu-title' => 'Foods',
+          'foods-add' => 'Add Foods',
+          // Food Area
+          'food-menu-title' => 'Foods',
+          'food-list' => 'View Foods',
+          'order-add' => 'Order Foods',
+          'order-list' => 'View Orders',
 
         //
         'dashboard-demo-two' => 'Demo 2',

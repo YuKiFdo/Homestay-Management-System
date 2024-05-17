@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Booking;
+use App\Models\Room;
+use App\Models\Customers;
+// validator
+use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Http\Request;
 
@@ -12,7 +16,11 @@ class BookingController extends Controller
     {
         $title = "Booking A Room";
         $description = "Change Application settings";
-        return view('booking.add', compact('title', 'description'));
+        // get all customers cus_id column
+        $customers = Customers::all();
+        // get all rooms room_id column
+        $rooms = Room::all();
+        return view('booking.add', compact('title', 'description', 'customers', 'rooms'));
     }
 
     /**
@@ -48,7 +56,39 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validators = Validator::make($request->all(), [
+            'room_id' => 'required',
+            'customer_id' => 'required',
+        ]);
+
+        $package = $request->packages;
+
+         if ($validators->fails()) {
+              return redirect()->route('booking.add', app()->getLocale())->withErrors($validators)->withInput();
+         } else {
+              $booking = new Booking();
+              $booking->booking_id = 'BK - ' . str_pad(Booking::count() + 1, 3, '0', STR_PAD_LEFT);
+              $booking->cusid = Customers::where('id', $request->customer_id)->first()->cusid;
+              $booking->room_id = Room::where('id', $request->room_id)->first()->name;
+            //   get room type from room table
+              $booking->type = Room::where('id', $request->room_id)->first()->type;
+              $booking->kids = $request->kids;
+                $booking->adults = $request->adults ||0;
+              $booking->checkin = $request->checkin;
+              $booking->checkout = $request->checkout;
+              if ($package == null) {
+                  $booking->package = 'Room Only';
+              } elseif ($package == '1') {
+                  $booking->package = 'Trip to Sigiriya';
+              } elseif ($package == '3') {
+                  $booking->package = 'Trip to Kandy';
+              }
+
+              $booking->status = 'Pending';
+              $booking->save();
+              return redirect()->route('booking.list', app()->getLocale())->with('success', 'Booking created successfully !');
+         }
+
     }
 
     /**
@@ -57,9 +97,11 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function invoice($language, $id)
     {
-        //
+        $title = "Invoice";
+        $description = "Some description for the page";
+        return view('bill.bill', compact('title', 'description'));
     }
 
     /**
@@ -102,4 +144,6 @@ class BookingController extends Controller
          $find_booking->delete();
          return redirect()->route('booking.list', app()->getLocale())->with('delete', 'Booking deleted successfully !');
      }
+
+
 }
