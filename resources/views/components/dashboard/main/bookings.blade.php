@@ -44,7 +44,7 @@
                             </tr>
                             <tr>
                                 <td>#BK-024</td>
-                                <td>Jason Thunder</td>
+                                <td>Ishara de Silva</td>
                                 <td>King Room</td>
                                 <td>12/12/2024</td>
                                 <td>15/12/2024</td>
@@ -83,7 +83,7 @@
                             </tr>
                             <tr>
                                 <td>#BK-021</td>
-                                <td>Krishan Mihiranga</td>
+                                <td>Sampath Rathnayake</td>
                                 <td>Single Room</td>
                                 <td>12/04/2024</td>
                                 <td>15/04/2024</td>
@@ -96,7 +96,7 @@
                             </tr>
                             <tr>
                                 <td>#BK-020</td>
-                                <td>Mahinda Rajapaksha</td>
+                                <td>Dinesh Fernando</td>
                                 <td>Deluxe Room</td>
                                 <td>12/11/2024</td>
                                 <td>15/11/2024</td>

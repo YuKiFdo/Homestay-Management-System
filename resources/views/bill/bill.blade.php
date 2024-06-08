@@ -54,8 +54,8 @@
                                         <div class="payment-invoice-qr__address">
                                             <p>Invoice To:</p>
                                             <span>BK - 001</span><br>
-                                            <span>Mahinda Rajapaksha</span><br>
-                                            <span>San Francisco, CA 94107, USA</span>
+                                            <span>Kasun Dinesh</span><br>
+                                            <span>Galle Road, CA 94107, Kandy</span>
                                         </div>
                                     </div><!-- End: .d-flex -->
                                 </div><!-- End: .payment-invoice-qr -->
